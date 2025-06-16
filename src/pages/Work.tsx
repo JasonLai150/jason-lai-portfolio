@@ -4,7 +4,7 @@ import { educationData, workExperienceData, projectsData } from "../data/content
 
 const Work = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-16">
       <Navigation />
       <SocialLinks />
       

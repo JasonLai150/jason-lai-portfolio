@@ -5,7 +5,7 @@ import { albumsData, booksData } from "../data/content";
 
 const Me = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-16">
       <Navigation />
       <SocialLinks />
       

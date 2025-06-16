@@ -56,7 +56,7 @@ const RevolvingDisplay = ({ items, type }: RevolvingDisplayProps) => {
           <img
             src={prevItem.image}
             alt={prevItem.title}
-            className={`transition-all duration-300 rounded-lg shadow-md ${
+            className={`transition-all duration-300 rounded-lg shadow-md object-cover ${
               type === "album" ? "w-32 h-32" : "w-24 h-32"
             }`}
           />
@@ -73,7 +73,7 @@ const RevolvingDisplay = ({ items, type }: RevolvingDisplayProps) => {
           <img
             src={currentItem.image}
             alt={currentItem.title}
-            className={`transition-all duration-300 rounded-lg shadow-lg ring-2 ring-primary/50 ${
+            className={`transition-all duration-300 rounded-lg shadow-lg ring-2 ring-primary/50 object-cover ${
               type === "album" ? "w-48 h-48" : "w-36 h-48"
             }`}
           />
@@ -91,7 +91,7 @@ const RevolvingDisplay = ({ items, type }: RevolvingDisplayProps) => {
           <img
             src={nextItem.image}
             alt={nextItem.title}
-            className={`transition-all duration-300 rounded-lg shadow-md ${
+            className={`transition-all duration-300 rounded-lg shadow-md object-cover ${
               type === "album" ? "w-32 h-32" : "w-24 h-32"
             }`}
           />
