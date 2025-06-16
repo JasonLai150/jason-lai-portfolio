@@ -1,8 +1,10 @@
 import Navigation from "../components/Navigation";
 import SocialLinks from "../components/SocialLinks";
-import { aboutContent } from "../data/content";
+import { aboutContent, processText } from "../data/content";
 
 const Index = () => {
+  const descriptionParagraphs = processText(aboutContent.description);
+  
   return (
     <div className="min-h-screen bg-gradient-light dark:bg-gradient-dark relative">
       <Navigation />
@@ -16,9 +18,11 @@ const Index = () => {
         <h2 className="text-xl text-muted-foreground mb-8 font-medium">
           {aboutContent.title}
         </h2>
-        <p className="text-lg text-foreground leading-relaxed">
-          {aboutContent.description}
-        </p>
+        <div className="text-lg text-foreground leading-relaxed space-y-2">
+          {descriptionParagraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import Navigation from "../components/Navigation";
 import SocialLinks from "../components/SocialLinks";
-import { educationData, workExperienceData, projectsData } from "../data/content";
+import { educationData, workExperienceData, projectsData, processText } from "../data/content";
 
 const Work = () => {
   return (
@@ -17,14 +17,21 @@ const Work = () => {
               <section>
                 <h2 className="text-2xl font-bold mb-6 text-foreground">Education</h2>
                 <div className="space-y-4">
-                  {educationData.map((edu, index) => (
-                    <div key={index} className="border-l-2 border-accent pl-4">
-                      <h3 className="font-semibold text-foreground">{edu.degree}</h3>
-                      <p className="text-primary font-medium">{edu.institution}</p>
-                      <p className="text-sm text-muted-foreground mb-2">{edu.period}</p>
-                      <p className="text-sm text-foreground">{edu.description}</p>
-                    </div>
-                  ))}
+                  {educationData.map((edu, index) => {
+                    const descriptionParagraphs = processText(edu.description);
+                    return (
+                      <div key={index} className="border-l-2 border-primary/40 pl-4">
+                        <h3 className="font-semibold text-foreground">{edu.degree}</h3>
+                        <p className="text-primary font-medium">{edu.institution}</p>
+                        <p className="text-sm text-muted-foreground mb-2">{edu.period}</p>
+                        <div className="text-sm text-foreground space-y-1">
+                          {descriptionParagraphs.map((paragraph, pIndex) => (
+                            <p key={pIndex}>{paragraph}</p>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </section>
 
@@ -33,7 +40,7 @@ const Work = () => {
                 <h2 className="text-2xl font-bold mb-6 text-foreground">Work Experience</h2>
                 <div className="space-y-6">
                   {workExperienceData.map((work, index) => (
-                    <div key={index} className="border-l-2 border-accent pl-4">
+                    <div key={index} className="border-l-2 border-primary/40 pl-4">
                       <h3 className="font-semibold text-foreground">{work.position}</h3>
                       <p className="text-primary font-medium">{work.company}</p>
                       <p className="text-sm text-muted-foreground mb-2">{work.period}</p>
@@ -50,7 +57,7 @@ const Work = () => {
                 <h2 className="text-2xl font-bold mb-6 text-foreground">Projects</h2>
                 <div className="space-y-6">
                   {projectsData.map((project, index) => (
-                    <div key={index} className="border border-border rounded-lg p-6 hover:border-accent transition-colors">
+                    <div key={index} className="border border-foreground/15 rounded-lg p-6 hover:border-primary/40 transition-colors">
                       <h3 className="font-semibold text-foreground mb-2">{project.title}</h3>
                       <p className="text-sm text-foreground mb-3">{project.description}</p>
                       <div className="flex flex-wrap gap-2 mb-3">

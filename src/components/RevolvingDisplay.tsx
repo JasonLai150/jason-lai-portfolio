@@ -29,76 +29,117 @@ const RevolvingDisplay = ({ items, type }: RevolvingDisplayProps) => {
     return items[normalizedIndex];
   };
 
-  const prevIndex = currentIndex - 1;
-  const nextIndex = currentIndex + 1;
+  const leftMostIndex = currentIndex - 2;
+  const leftIndex = currentIndex - 1;
+  const centerIndex = currentIndex;
+  const rightIndex = currentIndex + 1;
+  const rightMostIndex = currentIndex + 2;
   
-  const prevItem = getItemAtIndex(prevIndex);
-  const currentItem = getItemAtIndex(currentIndex);
-  const nextItem = getItemAtIndex(nextIndex);
+  const leftMostItem = getItemAtIndex(leftMostIndex);
+  const leftItem = getItemAtIndex(leftIndex);
+  const centerItem = getItemAtIndex(centerIndex);
+  const rightItem = getItemAtIndex(rightIndex);
+  const rightMostItem = getItemAtIndex(rightMostIndex);
 
   return (
     <div className="flex flex-col items-center space-y-6">
       {/* Carousel Container */}
-      <div className="relative flex items-center justify-center space-x-4 group">
+      <div className="relative flex items-center justify-center group perspective-1000" style={{ perspective: '1000px' }}>
         {/* Navigation Buttons */}
         <Button
           variant="ghost"
           size="sm"
           onClick={goToPrev}
-          className="absolute left-[-60px] z-10 bg-black/50 text-white hover:bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity"
+          className="absolute left-[-80px] z-20 bg-black/50 text-white hover:bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity"
         >
           ←
         </Button>
 
-        {/* Previous Item */}
-        <div className="flex flex-col items-center space-y-2 opacity-60 hover:opacity-80 transition-opacity cursor-pointer"
+        {/* Left Most Item */}
+        <div className="flex flex-col items-center space-y-2 opacity-30 hover:opacity-50 transition-all duration-300 cursor-pointer transform -rotate-12 scale-75 -translate-x-4"
              onClick={goToPrev}>
           <img
-            src={prevItem.image}
-            alt={prevItem.title}
-            className={`transition-all duration-300 rounded-lg shadow-md object-cover ${
-              type === "album" ? "w-48 h-48" : "w-36 h-48"
+            src={leftMostItem.image}
+            alt={leftMostItem.title}
+            className={`transition-all duration-300 rounded-lg shadow-sm object-cover ${
+              type === "album" ? "w-32 h-32" : "w-24 h-32"
             }`}
           />
-          <div className="text-center max-w-[120px]">
-            <p className="text-xs font-medium text-foreground truncate">{prevItem.title}</p>
+          <div className="text-center max-w-[80px]">
+            <p className="text-xs font-medium text-foreground truncate">{leftMostItem.title}</p>
             <p className="text-xs text-muted-foreground truncate">
-              {type === "album" ? prevItem.artist : prevItem.author}
+              {type === "album" ? leftMostItem.artist : leftMostItem.author}
             </p>
           </div>
         </div>
 
-        {/* Current Item (Focused) */}
-        <div className="flex flex-col items-center space-y-3 transform scale-110">
+        {/* Left Item */}
+        <div className="flex flex-col items-center space-y-2 opacity-60 hover:opacity-80 transition-all duration-300 cursor-pointer transform -rotate-6 scale-90 -translate-x-2"
+             onClick={goToPrev}>
           <img
-            src={currentItem.image}
-            alt={currentItem.title}
-            className={`transition-all duration-300 rounded-lg shadow-lg ring-2 ring-primary/50 object-cover ${
+            src={leftItem.image}
+            alt={leftItem.title}
+            className={`transition-all duration-300 rounded-lg shadow-md object-cover ${
+              type === "album" ? "w-40 h-40" : "w-30 h-40"
+            }`}
+          />
+          <div className="text-center max-w-[100px]">
+            <p className="text-xs font-medium text-foreground truncate">{leftItem.title}</p>
+            <p className="text-xs text-muted-foreground truncate">
+              {type === "album" ? leftItem.artist : leftItem.author}
+            </p>
+          </div>
+        </div>
+
+        {/* Center Item (Focused) */}
+        <div className="flex flex-col items-center space-y-3 transform scale-110 z-10">
+          <img
+            src={centerItem.image}
+            alt={centerItem.title}
+            className={`transition-all duration-300 rounded-lg shadow-xl ring-2 ring-primary/50 object-cover ${
               type === "album" ? "w-48 h-48" : "w-36 h-48"
             }`}
           />
           <div className="text-center max-w-[200px]">
-            <h3 className="font-semibold text-foreground">{currentItem.title}</h3>
+            <h3 className="font-semibold text-foreground">{centerItem.title}</h3>
             <p className="text-sm text-muted-foreground">
-              {type === "album" ? currentItem.artist : currentItem.author}
+              {type === "album" ? centerItem.artist : centerItem.author}
             </p>
           </div>
         </div>
 
-        {/* Next Item */}
-        <div className="flex flex-col items-center space-y-2 opacity-60 hover:opacity-80 transition-opacity cursor-pointer"
+        {/* Right Item */}
+        <div className="flex flex-col items-center space-y-2 opacity-60 hover:opacity-80 transition-all duration-300 cursor-pointer transform rotate-6 scale-90 translate-x-2"
              onClick={goToNext}>
           <img
-            src={nextItem.image}
-            alt={nextItem.title}
+            src={rightItem.image}
+            alt={rightItem.title}
             className={`transition-all duration-300 rounded-lg shadow-md object-cover ${
-              type === "album" ? "w-48 h-48" : "w-36 h-48"
+              type === "album" ? "w-40 h-40" : "w-30 h-40"
             }`}
           />
-          <div className="text-center max-w-[120px]">
-            <p className="text-xs font-medium text-foreground truncate">{nextItem.title}</p>
+          <div className="text-center max-w-[100px]">
+            <p className="text-xs font-medium text-foreground truncate">{rightItem.title}</p>
             <p className="text-xs text-muted-foreground truncate">
-              {type === "album" ? nextItem.artist : nextItem.author}
+              {type === "album" ? rightItem.artist : rightItem.author}
+            </p>
+          </div>
+        </div>
+
+        {/* Right Most Item */}
+        <div className="flex flex-col items-center space-y-2 opacity-30 hover:opacity-50 transition-all duration-300 cursor-pointer transform rotate-12 scale-75 translate-x-4"
+             onClick={goToNext}>
+          <img
+            src={rightMostItem.image}
+            alt={rightMostItem.title}
+            className={`transition-all duration-300 rounded-lg shadow-sm object-cover ${
+              type === "album" ? "w-32 h-32" : "w-24 h-32"
+            }`}
+          />
+          <div className="text-center max-w-[80px]">
+            <p className="text-xs font-medium text-foreground truncate">{rightMostItem.title}</p>
+            <p className="text-xs text-muted-foreground truncate">
+              {type === "album" ? rightMostItem.artist : rightMostItem.author}
             </p>
           </div>
         </div>
@@ -107,7 +148,7 @@ const RevolvingDisplay = ({ items, type }: RevolvingDisplayProps) => {
           variant="ghost"
           size="sm"
           onClick={goToNext}
-          className="absolute right-[-60px] z-10 bg-black/50 text-white hover:bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity"
+          className="absolute right-[-80px] z-20 bg-black/50 text-white hover:bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity"
         >
           →
         </Button>
