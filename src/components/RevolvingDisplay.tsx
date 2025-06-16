@@ -57,7 +57,7 @@ const RevolvingDisplay = ({ items, type }: RevolvingDisplayProps) => {
             src={prevItem.image}
             alt={prevItem.title}
             className={`transition-all duration-300 rounded-lg shadow-md object-cover ${
-              type === "album" ? "w-48 h-48" : "w-36 h-48"
+              type === "album" ? "w-32 h-32" : "w-24 h-32"
             }`}
           />
           <div className="text-center max-w-[120px]">
@@ -92,7 +92,7 @@ const RevolvingDisplay = ({ items, type }: RevolvingDisplayProps) => {
             src={nextItem.image}
             alt={nextItem.title}
             className={`transition-all duration-300 rounded-lg shadow-md object-cover ${
-              type === "album" ? "w-48 h-48" : "w-36 h-48"
+              type === "album" ? "w-32 h-32" : "w-24 h-32"
             }`}
           />
           <div className="text-center max-w-[120px]">
