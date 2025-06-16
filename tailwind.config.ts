@@ -95,6 +95,7 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-dark': 'linear-gradient(135deg, hsl(var(--dark-bg)) 0%, hsl(var(--darker-bg)) 100%)',
+				'gradient-light': 'linear-gradient(135deg, hsl(var(--background)) 0%, hsl(210 40% 94%) 100%)',
 			}
 		}
 	},

@@ -4,7 +4,7 @@ import { aboutContent } from "../data/content";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-dark dark:bg-gradient-dark bg-background relative">
+    <div className="min-h-screen bg-gradient-light dark:bg-gradient-dark relative">
       <Navigation />
       <SocialLinks />
       
