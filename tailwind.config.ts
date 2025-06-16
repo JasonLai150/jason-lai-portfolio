@@ -24,6 +24,8 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'dark-bg': 'hsl(var(--dark-bg))',
+				'darker-bg': 'hsl(var(--darker-bg))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -89,6 +91,10 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-dark': 'linear-gradient(135deg, hsl(var(--dark-bg)) 0%, hsl(var(--darker-bg)) 100%)',
 			}
 		}
 	},
