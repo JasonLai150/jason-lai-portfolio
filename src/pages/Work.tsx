@@ -4,7 +4,7 @@ import { educationData, workExperienceData, projectsData, processText } from "..
 
 const Work = () => {
   return (
-    <div className="min-h-screen bg-background pb-16">
+    <div className="min-h-screen bg-[hsl(50_5%_90%)] dark:bg-[hsl(180_5%_10%)] pb-16">
       <Navigation />
       <SocialLinks />
       
@@ -70,14 +70,16 @@ const Work = () => {
                           </span>
                         ))}
                       </div>
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline text-sm"
-                      >
-                        View Project →
-                      </a>
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline text-sm"
+                        >
+                          View Project →
+                        </a>
+                      )}
                     </div>
                   ))}
                 </div>

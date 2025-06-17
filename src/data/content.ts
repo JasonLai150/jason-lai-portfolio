@@ -45,87 +45,83 @@ export const workExperienceData = [
 export const projectsData = [
   {
     title: "FoundIt",
-    description: "A collaborative task management tool built with React, Express, and MongoDB. Features real-time updates and team collaboration.",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-    link: "https://github.com/jasonlai"
+    description: "Dating app based platform for connecting founders, developers, and investors.",
+    technologies: ["React Native", "Node.js", "Firebase", "TypeScript"],
+    link: "https://github.com/JasonLai150/FoundIt"
   },
   {
     title: "WebGPU Fire Simulator",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
+    description: "Real-time physically accurate fire simulator built with WebGPU in WGSL.",
+    technologies: ["WebGPU", "WGSL", "JavaScript"],
+    link: "https://github.com/JasonLai150/stablefluidsflame"
   },
   {
-    title: "Semantic Segmentation Implementation",
-    description: "React Native app for fitness tracking with GPS integration and social features.",
-    technologies: ["React Native", "Firebase", "Google Maps API"],
-    link: "https://github.com/jasonlai"
-  },
-  {
-    title: "Scene Recognition (ResNet Implementation)",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
-  },
-  {
-    title: "Image Stitching with SIFT Features",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
-  },
-  {
-    title: "NN, Random Forest, PCA, Logistic Regression, GMM, K-means Implementations",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
-  },
-  {
-    title: "Reliable Transport Protocol",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
-  },
-  {
-    title: "Process Scheduling Simulator",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
-  },
-  {
-    title: "Virtual Memory Simulator",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
-  },
-  {
-    title: "Functional Datapath for LC2200",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
-  },
-  {
-    title: "Delivery Drone Database",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
+    title: "Personal Portfolio Website",
+    description: "This!",
+    technologies: ["React", "Tailwind CSS", "Typescript"],
+    link: "https://github.com/JasonLai150/jason-lai-portfolio"
   },
   {
     title: "Green Plate",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
+    description: "Nutrition tracking and meal planning app powered by user-generated recipes.",
+    technologies: ["Android Studio", "Java", "JUnit", "Gradle"],
+    link: "https://github.com/joshmwu/CS2340A_Team47"
   },
   {
     title: "Social Cookbook",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
+    description: "Social app for viewing food content, connecting with users, and sharing and discovering recipes.",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Firebase"],
+    link: "https://github.com/Social-Cookbook"
+  },
+  {
+    title: "Semantic Segmentation Implementation",
+    description: "11-class semantic segmentation model using PPM and implemented with PSPNet. CS4476.",
+    technologies: ["Pytorch", "Jupyter Notebook", "Python"],
+  },
+  {
+    title: "Scene Recognition Model",
+    description: "Trained custom CNN and finetuned ResNet-18 model for 15-class scene recognition. CS4476.",
+    technologies: ["Pytorch", "Jupyter Notebook", "Python"],
+  },
+  {
+    title: "Panorama Image Stitching with SIFT Features",
+    description: "Harris corner point feature detection, SIFT feature descriptors, NNDR feature matching, homography estimation, and image stitching. CS4476.",
+    technologies: ["PyTorch","Python", "Jupyter Notebook", "OpenCV"],
+  },
+  {
+    title: "NN, Random Forest, PCA, Logistic Regression, GMM, K-means Implementations",
+    description: "Implementations of various machine learning algorithms. CS4641.",
+    technologies: ["Pytorch", "Python", "Pandas", "matplotlib", "scikit-learn"],
+  },
+  {
+    title: "Reliable Transport Protocol",
+    description: "Reliable transport protocol implementation including packetizing, checksum, and retransmission. CS2200.",
+    technologies: ["C"],
+  },
+  {
+    title: "Process Scheduling Simulator",
+    description: "Simulated FCFS, Round Robin, SRTF, and Priority Scheduling with thread-safe operation. CS2200.",
+    technologies: ["C"],
+  },
+  {
+    title: "Virtual Memory Simulator",
+    description: "Virtual memory simulation complete with address splitting, free-frame tracking, context switching, and clock-sweep and LRU eviction methods. CS2200.",
+    technologies: ["C"],
+  },
+  {
+    title: "Functional Datapath for LC2200",
+    description: "Functional LC2200 datapath with interrupts built with fundamental components in CircuitSim. Complete with microcode for the FSM and op-code definitions. CS2200.",
+    technologies: ["CircuitSim"],
+  },
+  {
+    title: "Delivery Drone Database",
+    description: "Relational database for delivery drones with CRUD operations.",
+    technologies: ["MySQL", "Sequelize"],
   },
   {
     title: "Ranged Noise Cancellation Device",
-    description: "Data visualization dashboard for e-commerce metrics using D3.js and Python backend with machine learning predictions.",
-    technologies: ["Python", "D3.js", "PostgreSQL", "scikit-learn"],
-    link: "https://github.com/jasonlai"
+    description: "Functional noise cancellation device with a microphone and speaker. Presented at 2023 IEEE Student Poster Expo.",
+    technologies: ["Arduino", "C"],
   },
 ];
 
