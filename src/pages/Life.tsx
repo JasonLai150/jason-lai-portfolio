@@ -16,7 +16,7 @@ interface Photo {
   caption: string;
 }
 
-// Function to create a 500x500 centered crop of an image
+// Function to create a 800x800 centered crop of an image
 const createSquareThumbnail = (originalUrl: string): Promise<string> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -31,22 +31,22 @@ const createSquareThumbnail = (originalUrl: string): Promise<string> => {
         return;
       }
       
-      // Set canvas to 500x500
-      canvas.width = 500;
-      canvas.height = 500;
+      // Set canvas to 800
+      canvas.width = 800;
+      canvas.height = 800;
       
       const { width: originalWidth, height: originalHeight } = img;
       
-      // Calculate scaling factor (scale down until the smaller dimension is 500px)
-      const scale = Math.max(500 / originalWidth, 500 / originalHeight);
+      // Calculate scaling factor (scale down until the smaller dimension is 800px)
+      const scale = Math.max(canvas.width / originalWidth, canvas.height / originalHeight);
       
       // Calculate scaled dimensions
       const scaledWidth = originalWidth * scale;
       const scaledHeight = originalHeight * scale;
       
       // Calculate crop position to center the image
-      const cropX = (scaledWidth - 500) / 2;
-      const cropY = (scaledHeight - 500) / 2;
+      const cropX = (scaledWidth - canvas.width) / 2;
+      const cropY = (scaledHeight - canvas.height) / 2;
       
       // Draw the image: scale it and position it to center the crop
       ctx.drawImage(
@@ -93,7 +93,7 @@ const PhotoCard = ({ photo, index, onClick }: {
       },
       { 
         threshold: 0.1,
-        rootMargin: '50px' // Start loading 50px before image comes into view
+        rootMargin: '200px' // Start loading 200px before image comes into view
       }
     );
 
@@ -313,9 +313,13 @@ const Life = () => {
       
       <div className="pt-20 px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Proof of Life
           </h1>
+
+          <h3 className="text-lg md:text-xl text-muted-foreground mb-8 text-center font-medium">
+            digital postcards from my life and travels
+          </h3>
 
           {loading && (
             <div className="flex justify-center items-center h-64">
