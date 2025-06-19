@@ -37,6 +37,17 @@ const Navigation = () => {
               Me
             </Button>
           </Link>
+          <Link to="/life">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className={`text-foreground hover:bg-accent/20 ${
+                location.pathname === '/life' ? 'bg-accent/20' : ''
+              }`}
+            >
+              Life
+            </Button>
+          </Link>
         </div>
       </div>
       <ThemeToggle />
