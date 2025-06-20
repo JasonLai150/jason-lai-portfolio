@@ -20,7 +20,7 @@ const Me = () => {
 
             {/* Bottom Half - Books */}
             <div className="flex flex-col items-center justify-center">
-              <h2 className="text-2xl font-bold mb-3 text-foreground">Books I Recommend</h2>
+              <h2 className="text-2xl font-bold mb-3 text-foreground">Books I've Read</h2>
               <RevolvingDisplay items={booksData} type="book" />
             </div>
           </div>
