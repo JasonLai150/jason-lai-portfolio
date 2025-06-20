@@ -46,7 +46,7 @@ export const projectsData = [
   {
     title: "FoundIt",
     description: "Dating app based platform for connecting founders, developers, and investors.",
-    technologies: ["React Native", "Node.js", "Firebase", "TypeScript"],
+    technologies: ["React Native", "Node.js", "Supabase", "TypeScript"],
     link: "https://github.com/JasonLai150/FoundIt"
   },
   {
@@ -58,7 +58,7 @@ export const projectsData = [
   {
     title: "Personal Portfolio Website",
     description: "This!",
-    technologies: ["React", "Tailwind CSS", "Typescript"],
+    technologies: ["React", "Tailwind CSS", "Typescript", "Supabase"],
     link: "https://github.com/JasonLai150/jason-lai-portfolio"
   },
   {
@@ -190,14 +190,14 @@ export const albumsData = [
 
 export const booksData = [
   {
+    title: "Zero to One",
+    author: "Peter Thiel",
+    image: "https://m.media-amazon.com/images/I/51zGCdRQXOL.jpg?w=300&h=400&fit=crop"
+  },
+  {
     title: "The 48 Laws of Power",
     author: "Robert Greene",
     image: "https://i.scdn.co/image/ab676663000022a8774c09f1f8a4c97ad6cbcaf7?w=300&h=400&fit=crop"
-  },
-  {
-    title: "Thank You for Arguing",
-    author: "Jay Heinrichs",
-    image: "https://m.media-amazon.com/images/I/61JLR+MlfiL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
   },
   {
     title: "The Great Gatsby",
@@ -219,5 +219,9 @@ export const booksData = [
     author: "William Golding",
     image: "https://m.media-amazon.com/images/I/81t-Qi4X6HL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
   },
-  
+  {
+    title: "Thank You for Arguing",
+    author: "Jay Heinrichs",
+    image: "https://m.media-amazon.com/images/I/61JLR+MlfiL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
+  },
 ];
