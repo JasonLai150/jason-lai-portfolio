@@ -74,6 +74,12 @@ export const projectsData = [
     link: "https://github.com/Social-Cookbook"
   },
   {
+    title: "Predicting Student Stress",
+    description: "Modeling and predicting stress levels in students based on over 20 features that were further processed with PCA. Modeled with Neural Networks, SVMs, and Decision Trees. CS4641.",
+    technologies: ["Pytorch", "Python", "Pandas", "matplotlib", "scikit-learn"],
+    link: "https://studentstress.streamlit.app/"
+  },
+  {
     title: "Semantic Segmentation Implementation",
     description: "11-class semantic segmentation model using PPM and implemented with PSPNet. CS4476.",
     technologies: ["Pytorch", "Jupyter Notebook", "Python"],
