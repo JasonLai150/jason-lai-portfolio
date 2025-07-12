@@ -32,13 +32,13 @@ export const workExperienceData = [
     company: "Smurfit Westrock",
     position: "Software & IT Intern",
     period: "May 2024 - August 2024",
-    description: "Developed data pipelines for Qlik BI dashboard using Python. Harnessed LLMs for automated proposal auditing."
+    description: "Created an LLM-based web audit tool for analyzing and spotting quality issues in IT project proposals."
   },
   {
     company: "Georgia State University",
     position: "Machine Learning Research Assistant",
     period: "August 2022 - May 2023",
-    description: "Data analysis and validation for novel sentiment analysis and adversarial attack prevention models."
+    description: "Data testing and validation for novel sentiment analysis and adversarial attack prevention models."
   }
 ];
 
