@@ -46,7 +46,7 @@ export const projectsData = [
   {
     title: "FoundIt",
     description: "Dating app based platform for connecting founders, developers, and investors.",
-    technologies: ["React Native", "Node.js", "Supabase", "TypeScript"],
+    technologies: ["React Native", "TypeScript", "Node.js", "Supabase", "Expo"],
     link: "https://github.com/JasonLai150/FoundIt"
   },
   {
@@ -64,7 +64,7 @@ export const projectsData = [
   {
     title: "Green Plate",
     description: "Nutrition tracking and meal planning app powered by user-generated recipes.",
-    technologies: ["Android Studio", "Java", "JUnit", "Gradle"],
+    technologies: ["Android Studio", "Java", "JUnit", "Gradle", "Firebase"],
     link: "https://github.com/joshmwu/CS2340A_Team47"
   },
   {
