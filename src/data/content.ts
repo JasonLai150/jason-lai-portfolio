@@ -65,7 +65,7 @@ export const projectsData = [
     title: "Green Plate",
     description: "Nutrition tracking and meal planning app powered by user-generated recipes.",
     technologies: ["Android Studio", "Java", "JUnit", "Gradle", "Firebase"],
-    link: "https://github.com/joshmwu/CS2340A_Team47"
+    link: "https://github.com/JasonLai150/GreenPlate"
   },
   {
     title: "Social Cookbook",
