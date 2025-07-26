@@ -44,6 +44,12 @@ export const workExperienceData = [
 
 export const projectsData = [
   {
+    title: "GT-GPT",
+    description: "In Progress... RAG tool for finding information from Georgia Tech's impossible-to-navigate webpages",
+    technologies: ["LangChain", "ChromaDB", "RAG", "Scrapy", "BeautifulSoup", "Python"],
+    link: "https://github.com/JasonLai150/GT-GPT-Tools"
+  },
+  {
     title: "FoundIt",
     description: "Dating app based platform for connecting founders, developers, and investors.",
     technologies: ["React Native", "TypeScript", "Node.js", "Supabase", "Expo"],
@@ -196,6 +202,11 @@ export const albumsData = [
 
 export const booksData = [
   {
+    title: "Meditations",
+    author: "Marcus Aurelius",
+    image: "https://m.media-amazon.com/images/I/61OV+c873EL.jpg?w=300&h=400&fit=crop"
+  },
+  {
     title: "Zero to One",
     author: "Peter Thiel",
     image: "https://m.media-amazon.com/images/I/51zGCdRQXOL.jpg?w=300&h=400&fit=crop"
@@ -204,6 +215,16 @@ export const booksData = [
     title: "The 48 Laws of Power",
     author: "Robert Greene",
     image: "https://i.scdn.co/image/ab676663000022a8774c09f1f8a4c97ad6cbcaf7?w=300&h=400&fit=crop"
+  },
+  {
+    title: "The Metamorphasis",
+    author: "Franz Kafka",
+    image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1699178982i/157112404.jpg?w=300&h=400&fit=crop"
+  },
+  {
+    title: "Thank You for Arguing",
+    author: "Jay Heinrichs",
+    image: "https://m.media-amazon.com/images/I/61JLR+MlfiL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
   },
   {
     title: "The Great Gatsby",
@@ -221,13 +242,13 @@ export const booksData = [
     image: "https://m.media-amazon.com/images/I/61sKsbPb5GL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
   },
   {
+    title: "1984",
+    author: "George Orwell",
+    image: "https://m.media-amazon.com/images/I/71wANojhEKL.jpg?w=300&h=400&fit=crop"
+  },
+  {
     title: "Lord of the Flies",
     author: "William Golding",
     image: "https://m.media-amazon.com/images/I/81t-Qi4X6HL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
-  },
-  {
-    title: "Thank You for Arguing",
-    author: "Jay Heinrichs",
-    image: "https://m.media-amazon.com/images/I/61JLR+MlfiL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
-  },
+  }
 ];
