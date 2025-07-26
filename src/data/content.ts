@@ -45,7 +45,7 @@ export const workExperienceData = [
 export const projectsData = [
   {
     title: "GT-GPT",
-    description: "In Progress... RAG tool for finding information from Georgia Tech's impossible-to-navigate webpages",
+    description: "In progress... \nRAG tool for finding information from Georgia Tech's impossible-to-navigate webpages",
     technologies: ["LangChain", "ChromaDB", "RAG", "Scrapy", "BeautifulSoup", "Python"],
     link: "https://github.com/JasonLai150/GT-GPT-Tools"
   },
