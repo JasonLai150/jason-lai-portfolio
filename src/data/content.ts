@@ -202,9 +202,9 @@ export const albumsData = [
 
 export const booksData = [
   {
-    title: "Meditations",
-    author: "Marcus Aurelius",
-    image: "https://m.media-amazon.com/images/I/61OV+c873EL.jpg?w=300&h=400&fit=crop"
+    title: "Meditations, The Annotated Edition",
+    author: "Marcus Aurelius, Robin Waterfield",
+    image: "https://m.media-amazon.com/images/I/811XpND7V0L.jpg?w=300&h=400&fit=crop"
   },
   {
     title: "Zero to One",
