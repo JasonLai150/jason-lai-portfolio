@@ -9,7 +9,7 @@ export const processText = (text: string): string[] => {
 export const aboutContent = {
   name: "Jason Lai",
   title: "Software Engineer",
-  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate engineer with experience in full-stack development, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE}I'm currently exploring data engineering, machine learning, and AI. ${NEWLINE} Reach out to me @ jlai80 [at] gatech [dot] edu`
+  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate engineer with experience in full-stack development, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE}I'm currently exploring data engineering, machine learning, and AI. ${NEWLINE} Reach out to me @ laijason150 [at] gmail [dot] com`
 };
 
 export const educationData = [
@@ -45,7 +45,7 @@ export const workExperienceData = [
 export const projectsData = [
   {
     title: "GT-GPT",
-    description: "In progress... \nRAG tool for finding information from Georgia Tech's impossible-to-navigate webpages",
+    description: `In progress... ${NEWLINE} RAG tool for finding information from Georgia Tech's impossible-to-navigate webpages`,
     technologies: ["LangChain", "ChromaDB", "RAG", "Scrapy", "BeautifulSoup", "Python"],
     link: "https://github.com/JasonLai150/GT-GPT-Tools"
   },
