@@ -37,14 +37,20 @@ const Work = () => {
           <section>
             <h2 className="text-2xl font-bold mb-6 text-foreground">Work Experience</h2>
             <div className="space-y-6">
-              {workExperienceData.map((work, index) => (
-                <div key={index} className="border-l-2 border-primary/40 pl-4">
+              {workExperienceData.map((work, index) => {
+                const descriptionParagraphs = processText(work.description);
+                return (
+                  <div key={index} className="border-l-2 border-primary/40 pl-4">
                   <h3 className="font-semibold text-foreground">{work.position}</h3>
                   <p className="text-primary font-medium">{work.company}</p>
                   <p className="text-sm text-muted-foreground mb-2">{work.period}</p>
-                  <p className="text-sm text-foreground">{work.description}</p>
+                  <p className="text-sm text-foreground">{
+                    descriptionParagraphs.map((paragraph, pIndex) => (
+                      <p key={pIndex}>{paragraph}</p>
+                    ))}</p>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </section>
 
@@ -52,32 +58,39 @@ const Work = () => {
           <section>
             <h2 className="text-2xl font-bold mb-6 text-foreground">Projects</h2>
             <div className="space-y-6">
-              {projectsData.map((project, index) => (
-                <div key={index} className="border border-foreground/15 rounded-lg p-6 hover:border-primary/40 transition-colors">
-                  <h3 className="font-semibold text-foreground mb-2">{project.title}</h3>
-                  <p className="text-sm text-foreground mb-3">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 bg-accent text-accent-foreground text-xs rounded"
-                      >
-                        {tech}
-                      </span>
+              {projectsData.map((project, index) => {
+                const descriptionParagraphs = processText(project.description);
+                return (
+                  <div key={index} className="border border-foreground/15 rounded-lg p-6 hover:border-primary/40 transition-colors">
+                    <h3 className="font-semibold text-foreground mb-2">{project.title}</h3>
+                    <p className="text-sm text-foreground mb-3">{
+                      descriptionParagraphs.map((paragraph, pIndex) => (
+                        <p key={pIndex}>{paragraph}</p>
+                      ))}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-2 py-1 bg-accent text-accent-foreground text-xs rounded"
+                        >
+                          {tech}
+                        </span>
                     ))}
+                    </div>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline text-sm"
+                      >
+                        View Project →
+                      </a>
+                    )}
                   </div>
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline text-sm"
-                    >
-                      View Project →
-                    </a>
-                  )}
-                </div>
-              ))}
+                );
+              })}
             </div>
           </section>
         </div>
@@ -115,14 +128,21 @@ const Work = () => {
               <section>
                 <h2 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-4 xl:mb-6 text-foreground">Work Experience</h2>
                 <div className="space-y-4 xl:space-y-6">
-                  {workExperienceData.map((work, index) => (
-                    <div key={index} className="border-l-2 border-primary/40 pl-3 xl:pl-4">
-                      <h3 className="font-semibold text-foreground text-sm xl:text-base 2xl:text-lg">{work.position}</h3>
-                      <p className="text-primary font-medium text-sm xl:text-sm 2xl:text-base">{work.company}</p>
-                      <p className="text-xs xl:text-xs 2xl:text-sm text-muted-foreground mb-2">{work.period}</p>
-                      <p className="text-sm xl:text-sm 2xl:text-base text-foreground">{work.description}</p>
-                    </div>
-                  ))}
+                  {workExperienceData.map((work, index) => {
+                    const descriptionParagraphs = processText(work.description);
+                    return (
+                      <div key={index} className="border-l-2 border-primary/40 pl-3 xl:pl-4">
+                        <h3 className="font-semibold text-foreground text-sm xl:text-base 2xl:text-lg">{work.position}</h3>
+                        <p className="text-primary font-medium text-sm xl:text-sm 2xl:text-base">{work.company}</p>
+                        <p className="text-xs xl:text-xs 2xl:text-sm text-muted-foreground mb-2">{work.period}</p>
+                        <p className="text-sm xl:text-sm 2xl:text-base text-foreground">{
+                          descriptionParagraphs.map((paragraph, pIndex) => (
+                            <p key={pIndex}>{paragraph}</p>
+                          ))}
+                        </p>
+                      </div>
+                    );
+                  })}
                 </div>
               </section>
             </div>
@@ -132,32 +152,39 @@ const Work = () => {
               <section>
                 <h2 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-4 xl:mb-6 text-foreground">Projects</h2>
                 <div className="space-y-4 xl:space-y-6">
-                  {projectsData.map((project, index) => (
-                    <div key={index} className="border border-foreground/15 rounded-lg p-4 xl:p-6 2xl:p-8 hover:border-primary/40 transition-colors">
-                      <h3 className="font-semibold text-foreground mb-2 text-sm xl:text-base 2xl:text-lg">{project.title}</h3>
-                      <p className="text-sm xl:text-sm 2xl:text-base text-foreground mb-2 xl:mb-3">{project.description}</p>
-                      <div className="flex flex-wrap gap-1 xl:gap-2 mb-2 xl:mb-3">
-                        {project.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="px-2 py-1 xl:px-2 xl:py-1 bg-accent text-accent-foreground text-xs xl:text-xs 2xl:text-sm rounded"
+                  {projectsData.map((project, index) => {
+                    const descriptionParagraphs = processText(project.description);
+                    return (
+                      <div key={index} className="border border-foreground/15 rounded-lg p-4 xl:p-6 2xl:p-8 hover:border-primary/40 transition-colors">
+                        <h3 className="font-semibold text-foreground mb-2 text-sm xl:text-base 2xl:text-lg">{project.title}</h3>
+                        <p className="text-sm xl:text-sm 2xl:text-base text-foreground mb-2 xl:mb-3">{
+                          descriptionParagraphs.map((paragraph, pIndex) => (
+                            <p key={pIndex}>{paragraph}</p>
+                          ))}
+                        </p>
+                        <div className="flex flex-wrap gap-1 xl:gap-2 mb-2 xl:mb-3">
+                          {project.technologies.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className="px-2 py-1 xl:px-2 xl:py-1 bg-accent text-accent-foreground text-xs xl:text-xs 2xl:text-sm rounded"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                        {project.link && (
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline text-xs xl:text-xs 2xl:text-sm"
                           >
-                            {tech}
-                          </span>
-                        ))}
+                            View Project →
+                          </a>
+                        )}
                       </div>
-                      {project.link && (
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary hover:underline text-xs xl:text-xs 2xl:text-sm"
-                        >
-                          View Project →
-                        </a>
-                      )}
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </section>
             </div>
