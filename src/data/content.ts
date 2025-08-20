@@ -45,7 +45,7 @@ export const workExperienceData = [
 export const projectsData = [
   {
     title: "GT-GPT",
-    description: `In progress... ${NEWLINE} RAG tool for finding information from Georgia Tech's impossible-to-navigate webpages`,
+    description: `In progress... ${NEWLINE} chat-based RAG tool for finding information from Georgia Tech's vast, convoluted web pages`,
     technologies: ["LangChain", "ChromaDB", "RAG", "Scrapy", "BeautifulSoup", "Python"],
     link: "https://github.com/JasonLai150/GT-GPT-Tools"
   },
@@ -81,7 +81,7 @@ export const projectsData = [
   },
   {
     title: "Predicting Student Stress",
-    description: "Modeling and predicting stress levels in students based on over 20 features that were further processed with PCA. Modeled with Neural Networks, SVMs, and Decision Trees. CS4641.",
+    description: "Modeling and predicting stress levels in students based on over 20 features that were further processed with PCA. Modeled with Neural Networks, SVMs, and Decision Trees.",
     technologies: ["Pytorch", "Python", "Pandas", "matplotlib", "scikit-learn"],
     link: "https://studentstress.streamlit.app/"
   },
@@ -93,17 +93,17 @@ export const projectsData = [
   },
   {
     title: "Semantic Segmentation Implementation",
-    description: "11-class semantic segmentation model using PPM and implemented with PSPNet. CS4476.",
+    description: "11-class semantic segmentation model using PPM and implemented with PSPNet.",
     technologies: ["Pytorch", "Jupyter Notebook", "Python"],
   },
   {
     title: "Scene Recognition Model",
-    description: "Trained custom CNN and finetuned ResNet-18 model for 15-class scene recognition. CS4476.",
+    description: "Trained custom CNN and finetuned ResNet-18 model for 15-class scene recognition.",
     technologies: ["Pytorch", "Jupyter Notebook", "Python"],
   },
   {
     title: "Panorama Image Stitching with SIFT Features",
-    description: "Harris corner point feature detection, SIFT feature descriptors, NNDR feature matching, homography estimation, and image stitching. CS4476.",
+    description: "Harris corner point feature detection, SIFT feature descriptors, NNDR feature matching, homography estimation, and image stitching.",
     technologies: ["PyTorch","Python", "Jupyter Notebook", "OpenCV"],
   },
   {
@@ -113,17 +113,17 @@ export const projectsData = [
   },
   {
     title: "Reliable Transport Protocol",
-    description: "Reliable transport protocol implementation including packetizing, checksum, and retransmission. CS2200.",
+    description: "Reliable transport protocol implementation including packetizing, checksum, and retransmission.",
     technologies: ["C"],
   },
   {
     title: "Process Scheduling Simulator",
-    description: "Simulated FCFS, Round Robin, SRTF, and Priority Scheduling with thread-safe operation. CS2200.",
+    description: "Simulated FCFS, Round Robin, SRTF, and Priority Scheduling with thread-safe operation.",
     technologies: ["C"],
   },
   {
     title: "Virtual Memory Simulator",
-    description: "Virtual memory simulation complete with address splitting, free-frame tracking, context switching, and clock-sweep and LRU eviction methods. CS2200.",
+    description: "Virtual memory simulation complete with address splitting, free-frame tracking, context switching, and clock-sweep and LRU eviction methods.",
     technologies: ["C"],
   },
   {
