@@ -51,7 +51,7 @@ export const projectsData = [
   },
   {
     title: "FoundIt",
-    description: "Dating app based platform for connecting founders, developers, and investors.",
+    description: "Match-based networking app for connecting founders, developers, and investors.",
     technologies: ["React Native", "TypeScript", "Node.js", "Supabase", "Expo"],
     link: "https://github.com/JasonLai150/FoundIt"
   },
@@ -141,6 +141,11 @@ export const projectsData = [
 
 export const albumsData = [
   {
+    title: "nolimit",
+    artist: "Knock2",
+    image: "https://i.scdn.co/image/ab67616d0000b2737b3e13a4e21a128c0d04c789?w=300&h=300&fit=crop"
+  },
+  {
     title: "Luv is Rage",
     artist: "Lil Uzi Vert",
     image: "https://i.scdn.co/image/ab67616d0000b2736b9e2cd3c76bc7e3c1c52f95?w=300&h=300&fit=crop"
@@ -194,6 +199,11 @@ export const albumsData = [
     title: "LIVE.LOVE.A$AP",
     artist: "A$AP Rocky",
     image: "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd?w=300&h=300&fit=crop"
+  },
+  {
+    title: "18 Months",
+    artist: "Calvin Harris",
+    image: "https://i.scdn.co/image/ab67616d0000b273dcef905cb144d4867119850b?w=300&h=300&fit=crop"
   },
   {
     title: "Camp",
