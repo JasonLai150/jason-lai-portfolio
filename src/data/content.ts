@@ -86,6 +86,12 @@ export const projectsData = [
     link: "https://studentstress.streamlit.app/"
   },
   {
+    title: "Ranged Noise Cancellation Device",
+    description: "Functional noise cancellation device with a microphone and speaker. Presented at 2023 IEEE ISEC conference.",
+    technologies: ["Arduino", "C", "Circuit Design"],
+    link: "https://ieeexplore.ieee.org/document/10025054"
+  },
+  {
     title: "Semantic Segmentation Implementation",
     description: "11-class semantic segmentation model using PPM and implemented with PSPNet. CS4476.",
     technologies: ["Pytorch", "Jupyter Notebook", "Python"],
@@ -130,11 +136,7 @@ export const projectsData = [
     description: "Relational database for delivery drones with CRUD operations.",
     technologies: ["MySQL", "Sequelize"],
   },
-  {
-    title: "Ranged Noise Cancellation Device",
-    description: "Functional noise cancellation device with a microphone and speaker. Presented at 2023 IEEE Student Poster Expo.",
-    technologies: ["Arduino", "C"],
-  },
+
 ];
 
 export const albumsData = [
