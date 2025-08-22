@@ -25,7 +25,7 @@ export const workExperienceData = [
   {
     company: "Amazon",
     position: "Software Development Engineer Intern",
-    period: "May 2025 - Present",
+    period: "May 2025 - August 2025",
     description: "Developed an end to end testing platform for Amazon's internal delivery tracking system using native AWS services."
   },
   {
