@@ -245,28 +245,34 @@ export const booksData = [
     image: "https://m.media-amazon.com/images/I/61JLR+MlfiL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
   },
   {
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    image: "https://m.media-amazon.com/images/I/81TLiZrasVL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
+    title: "The Almanack of Naval Ravikant",
+    author: "Eric Jorgenson",
+    image: "https://m.media-amazon.com/images/I/51VFkbM2siL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
   },
-  {
-    title: "The Things They Carried",
-    author: "Tim O'Brien",
-    image: "https://m.media-amazon.com/images/I/71boO2LKbCL.jpg?w=300&h=400&fit=crop"
-  },
-  {
-    title: "Farenheit 451",
-    author: "Ray Bradbury",
-    image: "https://m.media-amazon.com/images/I/61sKsbPb5GL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
-  },
-  {
-    title: "1984",
-    author: "George Orwell",
-    image: "https://m.media-amazon.com/images/I/71wANojhEKL.jpg?w=300&h=400&fit=crop"
-  },
-  {
-    title: "Lord of the Flies",
-    author: "William Golding",
-    image: "https://m.media-amazon.com/images/I/81t-Qi4X6HL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
-  }
 ];
+
+// {
+//     title: "The Great Gatsby",
+//     author: "F. Scott Fitzgerald",
+//     image: "https://m.media-amazon.com/images/I/81TLiZrasVL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
+//   },
+//   {
+//     title: "The Things They Carried",
+//     author: "Tim O'Brien",
+//     image: "https://m.media-amazon.com/images/I/71boO2LKbCL.jpg?w=300&h=400&fit=crop"
+//   },
+//   {
+//     title: "Farenheit 451",
+//     author: "Ray Bradbury",
+//     image: "https://m.media-amazon.com/images/I/61sKsbPb5GL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
+//   },
+//   {
+//     title: "1984",
+//     author: "George Orwell",
+//     image: "https://m.media-amazon.com/images/I/71wANojhEKL.jpg?w=300&h=400&fit=crop"
+//   },
+//   {
+//     title: "Lord of the Flies",
+//     author: "William Golding",
+//     image: "https://m.media-amazon.com/images/I/81t-Qi4X6HL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
+//   }
