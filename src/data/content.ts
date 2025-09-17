@@ -146,11 +146,11 @@ export const projectsData = [
 ];
 
 export const albumsData = [
-  {
-    title: "nolimit",
-    artist: "Knock2",
-    image: "https://i.scdn.co/image/ab67616d0000b2737b3e13a4e21a128c0d04c789?w=300&h=300&fit=crop"
-  },
+  // {
+  //   title: "nolimit",
+  //   artist: "Knock2",
+  //   image: "https://i.scdn.co/image/ab67616d0000b2737b3e13a4e21a128c0d04c789?w=300&h=300&fit=crop"
+  // },
   {
     title: "Luv is Rage",
     artist: "Lil Uzi Vert",
@@ -181,11 +181,11 @@ export const albumsData = [
     artist: "Lil Uzi Vert",
     image: "https://i.scdn.co/image/ab67616d0000b273158b08c02c249bc651b3b47a?w=300&h=300&fit=crop"
   },
-  {
-    title: "Honestly, Nevermind",
-    artist: "Drake",
-    image: "https://i.scdn.co/image/ab67616d0000b2738dc0d801766a5aa6a33cbe37?w=300&h=300&fit=crop"
-  },
+  // {
+  //   title: "Honestly, Nevermind",
+  //   artist: "Drake",
+  //   image: "https://i.scdn.co/image/ab67616d0000b2738dc0d801766a5aa6a33cbe37?w=300&h=300&fit=crop"
+  // },
   {
     title: "My Beautiful Dark Twisted Fantasy",
     artist: "Kanye West",
@@ -207,15 +207,20 @@ export const albumsData = [
     image: "https://i.scdn.co/image/ab67616d00001e02c8ced8a4d6b6b61eb592f3dd?w=300&h=300&fit=crop"
   },
   {
-    title: "18 Months",
-    artist: "Calvin Harris",
-    image: "https://i.scdn.co/image/ab67616d0000b273dcef905cb144d4867119850b?w=300&h=300&fit=crop"
+    title: "Beatopia",
+    artist: "beabadoobee",
+    image: "https://i.scdn.co/image/ab67616d0000b273384d10f967c2b914de7e2713?w=300&h=300&fit=crop"
   },
-  {
-    title: "Camp",
-    artist: "Childish Gambino",
-    image: "https://i.scdn.co/image/ab67616d0000b2736f134f8d843353be21a9706e?w=300&h=300&fit=crop"
-  },
+  // {
+  //   title: "18 Months",
+  //   artist: "Calvin Harris",
+  //   image: "https://i.scdn.co/image/ab67616d0000b273dcef905cb144d4867119850b?w=300&h=300&fit=crop"
+  // },
+  // {
+  //   title: "Camp",
+  //   artist: "Childish Gambino",
+  //   image: "https://i.scdn.co/image/ab67616d0000b2736f134f8d843353be21a9706e?w=300&h=300&fit=crop"
+  // },
 ];
 
 export const booksData = [
@@ -249,8 +254,6 @@ export const booksData = [
     author: "Eric Jorgenson",
     image: "https://m.media-amazon.com/images/I/51VFkbM2siL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
   },
-];
-
 // {
 //     title: "The Great Gatsby",
 //     author: "F. Scott Fitzgerald",
@@ -276,3 +279,5 @@ export const booksData = [
 //     author: "William Golding",
 //     image: "https://m.media-amazon.com/images/I/81t-Qi4X6HL._UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
 //   }
+];
+
