@@ -30,9 +30,15 @@ export const workExperienceData = [
   },
   {
     company: "Smurfit Westrock",
-    position: "Software & IT Intern",
+    position: "Software Engineer Intern",
     period: "May 2024 - August 2024",
     description: "Created an LLM-based web audit tool for analyzing and spotting quality issues in IT project proposals."
+  },
+  {
+    company: "Physically-Based Neural Graphics VIP",
+    position: "Student Researcher",
+    period: "January 2024 - May 2024",
+    description: "Research on wildfire physics and graphics. Created 3D wildfire spread simulations in OpenGL and flame simulations in WebGL."
   },
   {
     company: "Georgia State University",
