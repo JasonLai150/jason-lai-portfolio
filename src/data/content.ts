@@ -17,7 +17,7 @@ export const educationData = [
     institution: "Georgia Institute of Technology",
     degree: "Bachelor of Science in Computer Science",
     period: "2023 - 2027",
-    description: `GPA: 3.91/4.00. ${NEWLINE} Minor in Mathematics. ${NEWLINE} Concentrations in Information Internetworks and Artifical Intelligence.`
+    description: `GPA: 3.91 ${NEWLINE} Minor in Mathematics. ${NEWLINE} Concentrations in Information Internetworks and Computational Intelligence.`
   }
 ];
 
