@@ -169,9 +169,9 @@ export const albumsData = [
     image: "https://i.scdn.co/image/ab67616d0000b2736b9e2cd3c76bc7e3c1c52f95?w=300&h=300&fit=crop"
   },
   {
-    title: "Graduation",
-    artist: "Kanye West",
-    image: "https://i.scdn.co/image/ab67616d0000b2739bbd79106e510d13a9a5ec33?w=300&h=300&fit=crop"
+    title: "Archangel",
+    artist: "Kettama",
+    image: "https://i.scdn.co/image/ab67616d0000b273838e79a9ad425bb5e7d6150c?w=300&h=300&fit=crop"
   },
   {
     title: "Ctrl",
