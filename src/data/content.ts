@@ -9,15 +9,21 @@ export const processText = (text: string): string[] => {
 export const aboutContent = {
   name: "Jason Lai",
   title: "Software Engineer",
-  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate engineer with experience in full-stack development, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE}I'm currently exploring machine learning, data engineering, and AI. ${NEWLINE}⠀${NEWLINE} Reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
+  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate engineer with experience in full-stack development, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE}I specialize in back-end and cloud development, and I'm currently exploring machine learning and data engineering. ${NEWLINE}⠀${NEWLINE} View my socials or reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
 };
 
 export const educationData = [
   {
     institution: "Georgia Institute of Technology",
-    degree: "Bachelor of Science in Computer Science",
+    degree: "M.S. Computer Science",
+    period: "2027-",
+    description: `Accepted for Fall 2027. ${NEWLINE} Artificial Intelligence Specialization`
+  },
+  {
+    institution: "Georgia Institute of Technology",
+    degree: "B.S. Computer Science",
     period: "2023 - 2027",
-    description: `GPA: 3.91 ${NEWLINE} Minor in Mathematics. ${NEWLINE} Concentrations in Information Internetworks and Computational Intelligence.`
+    description: `GPA: 3.9 ${NEWLINE} Minor in Mathematics. ${NEWLINE} Concentrations in Information Internetworks and Computational Intelligence.`
   }
 ];
 
@@ -26,17 +32,17 @@ export const workExperienceData = [
     company: "Amazon",
     position: "Software Development Engineer Intern",
     period: "May 2025 - August 2025",
-    description: "Developed an end to end testing platform for Amazon's internal delivery tracking system using native AWS services."
+    description: "Developed an end to end testing platform for Amazon's internal driver and route tracking system using native AWS services."
   },
   {
     company: "Smurfit Westrock",
     position: "Software Engineer Intern",
     period: "May 2024 - August 2024",
-    description: "Created an LLM-based web audit tool for analyzing and spotting quality issues in IT project proposals."
+    description: "Created an LLM-based web audit tool for analyzing quality issues in IT project proposals and suggesting improvements."
   },
   {
-    company: "Physically-Based Neural Graphics VIP",
-    position: "Student Researcher",
+    company: "Georgia Tech VIP Program",
+    position: "Software Developer",
     period: "January 2024 - May 2024",
     description: "Research on wildfire physics and graphics. Created 3D wildfire spread simulations in OpenGL and flame simulations in WebGL."
   },
@@ -50,8 +56,14 @@ export const workExperienceData = [
 
 export const projectsData = [
   {
+    title: "BarBuddy",
+    description: `In Progress...${NEWLINE}iOS mobile app for powerlifting lift judging and form visualization via CV.`,
+    technologies: ["Pytorch", "AWS", "Docker", "React Native", "Python", "TypeScript"],
+    link: "https://github.com/JasonLai150/BarBuddy"
+  },
+  {
     title: "GT-GPT",
-    description: `In progress... ${NEWLINE} chat-based RAG tool for finding information from Georgia Tech's vast, convoluted web pages`,
+    description: `Agentic RAG tool for finding information from Georgia Tech's vast, convoluted web pages`,
     technologies: ["LangChain", "ChromaDB", "RAG", "Scrapy", "BeautifulSoup", "Python"],
     link: "https://github.com/JasonLai150/GT-GPT-Tools"
   },

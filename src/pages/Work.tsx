@@ -4,12 +4,12 @@ import { educationData, workExperienceData, projectsData, processText } from "..
 
 const Work = () => {
   return (
-    <div className="min-h-screen bg-[hsl(50_5%_90%)] dark:bg-[hsl(180_5%_10%)] pb-16">
+    <div className="h-screen bg-[hsl(50_5%_90%)] dark:bg-[hsl(180_5%_10%)] overflow-hidden flex flex-col">
       <Navigation />
       <SocialLinks />
       
       {/* Mobile: Single column layout */}
-      <div className="pt-20 px-6 lg:hidden">
+      <div className="pt-20 px-6 lg:hidden overflow-y-auto flex-1">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Education Section */}
           <section>
@@ -97,14 +97,14 @@ const Work = () => {
       </div>
 
       {/* Desktop: Two column layout with independent scrolling */}
-      <div className="hidden lg:block pt-20 px-6 xl:px-8 2xl:px-12 h-screen">
-        <div className="max-w-6xl xl:max-w-7xl 2xl:max-w-8xl mx-auto h-full">
+      <div className="hidden lg:flex flex-col flex-1 overflow-hidden pt-20 px-6 xl:px-8 2xl:px-12">
+        <div className="max-w-6xl xl:max-w-7xl 2xl:max-w-8xl mx-auto flex-1 overflow-hidden w-full">
           <div className="grid grid-cols-2 gap-8 xl:gap-12 2xl:gap-16 h-full">
             {/* Left Column - Education and Work Experience */}
-            <div className="space-y-6 xl:space-y-8 2xl:space-y-10 overflow-y-auto pr-4">
+            <div className="overflow-y-auto pr-4 pb-6 xl:pb-8">
               {/* Education Section */}
               <section>
-                <h2 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-4 xl:mb-6 text-foreground">Education</h2>
+                <h2 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-2 xl:mb-3 text-foreground">Education</h2>
                 <div className="space-y-3 xl:space-y-4">
                   {educationData.map((edu, index) => {
                     const descriptionParagraphs = processText(edu.description);
@@ -125,8 +125,8 @@ const Work = () => {
               </section>
 
               {/* Work Experience Section */}
-              <section>
-                <h2 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-4 xl:mb-6 text-foreground">Work Experience</h2>
+              <section className="4 xl:mt-6">
+                <h2 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-2 xl:mb-3 text-foreground">Work Experience</h2>
                 <div className="space-y-4 xl:space-y-6">
                   {workExperienceData.map((work, index) => {
                     const descriptionParagraphs = processText(work.description);
@@ -148,9 +148,9 @@ const Work = () => {
             </div>
 
             {/* Right Column - Projects */}
-            <div className="overflow-y-auto pl-4">
+            <div className="overflow-y-auto pl-4 pb-6 xl:pb-8">
               <section>
-                <h2 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-4 xl:mb-6 text-foreground">Projects</h2>
+                <h2 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-2 xl:mb-3 text-foreground">Projects</h2>
                 <div className="space-y-4 xl:space-y-6">
                   {projectsData.map((project, index) => {
                     const descriptionParagraphs = processText(project.description);
