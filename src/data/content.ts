@@ -16,13 +16,13 @@ export const educationData = [
   {
     institution: "Georgia Institute of Technology",
     degree: "M.S. Computer Science",
-    period: "2027-",
-    description: `Accepted for Fall 2027. ${NEWLINE} Artificial Intelligence Specialization`
+    period: "2026-",
+    description: `Accepted for Fall 2026. ${NEWLINE} Artificial Intelligence Specialization`
   },
   {
     institution: "Georgia Institute of Technology",
     degree: "B.S. Computer Science",
-    period: "2023 - 2027",
+    period: "2023 - 2026",
     description: `GPA: 3.9 ${NEWLINE} Minor in Mathematics. ${NEWLINE} Concentrations in Information Internetworks and Computational Intelligence.`
   }
 ];

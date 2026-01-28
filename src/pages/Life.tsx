@@ -318,7 +318,7 @@ const Life = () => {
           </h1>
 
           <h3 className="text-lg md:text-xl text-muted-foreground mb-8 text-center font-medium">
-            digital postcards from my life and travels
+            photos im proud of
           </h3>
 
           {loading && (
