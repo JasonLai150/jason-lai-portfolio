@@ -29,6 +29,12 @@ export const educationData = [
 
 export const workExperienceData = [
   {
+    company: "MarkIt (YC F25)",
+    position: "Engineering Intern",
+    period: "March 2026 - Present",
+    description: "Agents & Infrastructure."
+  },
+  {
     company: "Amazon",
     position: "Software Development Engineer Intern",
     period: "May 2025 - August 2025",
