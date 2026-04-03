@@ -9,20 +9,20 @@ export const processText = (text: string): string[] => {
 export const aboutContent = {
   name: "Jason Lai",
   title: "Software Engineer",
-  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate engineer with experience in full-stack development, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE}I specialize in back-end and cloud development, and I'm currently exploring machine learning and data engineering. ${NEWLINE}⠀${NEWLINE} View my socials or reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
+  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate engineer with experience in back-end and cloud development, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE} I'm currently exploring machine learning and data engineering. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
 };
 
 export const educationData = [
   {
     institution: "Georgia Institute of Technology",
     degree: "M.S. Computer Science",
-    period: "2026-",
-    description: `Accepted for Fall 2026. ${NEWLINE} Artificial Intelligence Specialization`
+    period: "Accepted for BS/MS Program",
+    description: `Artificial Intelligence Specialization`
   },
   {
     institution: "Georgia Institute of Technology",
     degree: "B.S. Computer Science",
-    period: "2023 - 2026",
+    period: "2023 - Present",
     description: `GPA: 3.9 ${NEWLINE} Minor in Mathematics. ${NEWLINE} Concentrations in Information Internetworks and Computational Intelligence.`
   }
 ];
@@ -30,9 +30,9 @@ export const educationData = [
 export const workExperienceData = [
   {
     company: "MarkIt (YC F25)",
-    position: "Engineering Intern",
-    period: "March 2026 - Present",
-    description: "Agents & Infrastructure."
+    position: "Founding Engineer Intern",
+    period: "February 2026 - Present",
+    description: "Agents & Infrastructure & DevOps."
   },
   {
     company: "Amazon",
@@ -56,7 +56,7 @@ export const workExperienceData = [
     company: "Georgia State University",
     position: "Machine Learning Research Assistant",
     period: "August 2022 - May 2023",
-    description: "Data testing and validation for novel sentiment analysis and adversarial attack prevention models."
+    description: "Data processing and validation for novel sentiment analysis and adversarial attack prevention models."
   }
 ];
 
