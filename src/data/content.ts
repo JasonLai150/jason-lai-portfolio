@@ -32,7 +32,7 @@ export const workExperienceData = [
     company: "MarkIt (YC F25)",
     position: "Founding Engineer Intern",
     period: "February 2026 - Present",
-    description: "Agents & Infrastructure & DevOps."
+    description: "Agents & Infrastructure."
   },
   {
     company: "Amazon",
@@ -62,8 +62,20 @@ export const workExperienceData = [
 
 export const projectsData = [
   {
+    title: "echoAI",
+    description: `Podium for Google x Qualcomm Edge AI Hackathon. ${NEWLINE}Mobile app to help deaf and hard-of-hearing users detect, locate, and prioritize important sounds around them in real time, fully on-device. `,
+    technologies: ["liteRT", "tflite", "Android Studio", "Kotlin"],
+    link: "https://github.com/johndoan09/EchoAI"
+  },
+  {
+    title: "2.5D Pose Estimation",
+    description: `2.5D approach to training robust 3D human pose estimators in specialized exercise settings — Georgia Tech CS 7643 final project`,
+    technologies: ["Pytorch", "Python", "Vision Transformers", "LoRA"],
+    link: "https://github.com/JasonLai150/2.5DPoseEstimator"
+  },
+  {
     title: "BarBuddy",
-    description: `In Progress...${NEWLINE}iOS mobile app for powerlifting lift judging and form visualization via CV.`,
+    description: `iOS mobile app for powerlifting lift judging and form visualization via CV.`,
     technologies: ["Pytorch", "AWS", "Docker", "React Native", "Python", "TypeScript"],
     link: "https://github.com/JasonLai150/BarBuddy"
   },
