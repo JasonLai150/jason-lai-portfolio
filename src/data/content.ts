@@ -9,7 +9,7 @@ export const processText = (text: string): string[] => {
 export const aboutContent = {
   name: "Jason Lai",
   title: "Software Engineer",
-  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate engineer with experience in back-end and cloud development, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE} I'm currently exploring machine learning and data engineering. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
+  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate developer with experience in back-end and cloud engineering, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE} I'm currently exploring machine learning and data engineering. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
 };
 
 export const educationData = [
@@ -63,7 +63,7 @@ export const workExperienceData = [
 export const projectsData = [
   {
     title: "echoAI",
-    description: `Podium for Google x Qualcomm Edge AI Hackathon. ${NEWLINE}Mobile app to help deaf and hard-of-hearing users detect, locate, and prioritize important sounds around them in real time, fully on-device. `,
+    description: `🏆 Podium for Google x Qualcomm Edge AI Hackathon. ${NEWLINE}Mobile app to help deaf and hard-of-hearing users detect, locate, and prioritize important sounds around them in real time, fully on-device. `,
     technologies: ["liteRT", "tflite", "Android Studio", "Kotlin"],
     link: "https://github.com/johndoan09/EchoAI"
   },
@@ -148,6 +148,11 @@ export const projectsData = [
     technologies: ["Pytorch", "Python", "Pandas", "matplotlib", "scikit-learn"],
   },
   {
+    title: "Delivery Drone Database",
+    description: "Relational database for delivery drones with CRUD operations.",
+    technologies: ["MySQL", "Sequelize"],
+  },
+  {
     title: "Reliable Transport Protocol",
     description: "Reliable transport protocol implementation including packetizing, checksum, and retransmission.",
     technologies: ["C"],
@@ -166,12 +171,7 @@ export const projectsData = [
     title: "Functional Datapath for LC2200",
     description: "Functional LC2200 datapath with interrupts built with fundamental components in CircuitSim. Complete with microcode for the FSM and op-code definitions. CS2200.",
     technologies: ["CircuitSim"],
-  },
-  {
-    title: "Delivery Drone Database",
-    description: "Relational database for delivery drones with CRUD operations.",
-    technologies: ["MySQL", "Sequelize"],
-  },
+  }
 
 ];
 
