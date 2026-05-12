@@ -65,7 +65,7 @@ export const projectsData = [
     title: "echoAI",
     description: `🏆 Podium for Google x Qualcomm Edge AI Hackathon. ${NEWLINE}Mobile app to help deaf and hard-of-hearing users detect, locate, and prioritize important sounds around them in real time, fully on-device. `,
     technologies: ["liteRT", "tflite", "Android Studio", "Kotlin"],
-    link: "https://github.com/johndoan09/EchoAI"
+    link: "https://devpost.com/software/echoai-t7ol0v?ref_content=my-projects-tab&ref_feature=my_projects"
   },
   {
     title: "2.5D Pose Estimation",
