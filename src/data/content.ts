@@ -69,7 +69,7 @@ export const projectsData = [
   },
   {
     title: "ascii2diagram",
-    description: `Web tool for converting ASCII diagrams emitted by LLMs into clean, structured diagrams in draw.io/Diagrams.net XML format. Enhanced with AI-based parsing and error correction. ${NEWLINE} Serves over 1000 monthly users`,
+    description: `Web tool for converting ASCII diagrams emitted by LLMs into clean, structured diagrams in draw.io/Diagrams.net XML format.${NEWLINE} Enhanced with AI-based parsing and error correction. ${NEWLINE} Serves over 1000 monthly users`,
     technologies: ["Python", "GCP", "React", "Gemini LLM"],
     link: "https://ascii2diagram.xyz/"
   },
