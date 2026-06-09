@@ -74,6 +74,12 @@ export const projectsData = [
     link: "https://github.com/JasonLai150/2.5DPoseEstimator"
   },
   {
+    title: "ascii2diagram",
+    description: `Web tool for converting ASCII diagrams emitted by LLMs into clean, structured diagrams in draw.io/Diagrams.net XML format. Enhanced with AI-based parsing and error correction. ${NEWLINE} Serves over 1000 monthly users`,
+    technologies: ["Python", "GCP", "React", "Gemini LLM"],
+    link: "https://ascii2diagram.xyz/"
+  },
+  {
     title: "BarBuddy",
     description: `iOS mobile app for powerlifting lift judging and form visualization via CV.`,
     technologies: ["Pytorch", "AWS", "Docker", "React Native", "Python", "TypeScript"],
