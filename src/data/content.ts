@@ -68,16 +68,16 @@ export const projectsData = [
     link: "https://devpost.com/software/echoai-t7ol0v?ref_content=my-projects-tab&ref_feature=my_projects"
   },
   {
-    title: "2.5D Pose Estimation",
-    description: `2.5D approach to training robust 3D human pose estimators in specialized exercise settings — Georgia Tech CS 7643 final project`,
-    technologies: ["Pytorch", "Python", "Vision Transformers", "LoRA"],
-    link: "https://github.com/JasonLai150/2.5DPoseEstimator"
-  },
-  {
     title: "ascii2diagram",
     description: `Web tool for converting ASCII diagrams emitted by LLMs into clean, structured diagrams in draw.io/Diagrams.net XML format. Enhanced with AI-based parsing and error correction. ${NEWLINE} Serves over 1000 monthly users`,
     technologies: ["Python", "GCP", "React", "Gemini LLM"],
     link: "https://ascii2diagram.xyz/"
+  },
+  {
+    title: "2.5D Pose Estimation",
+    description: `2.5D approach to training robust 3D human pose estimators in specialized exercise settings — Georgia Tech CS 7643 final project`,
+    technologies: ["Pytorch", "Python", "Vision Transformers", "LoRA"],
+    link: "https://github.com/JasonLai150/2.5DPoseEstimator"
   },
   {
     title: "BarBuddy",
