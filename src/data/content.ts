@@ -9,7 +9,7 @@ export const processText = (text: string): string[] => {
 export const aboutContent = {
   name: "Jason Lai",
   title: "Software Engineer",
-  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate developer with experience in back-end and cloud engineering, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE} I'm currently exploring machine learning and data engineering. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
+  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate developer with experience in back-end and cloud engineering, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE} I'm currently interested in AI engineering. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
 };
 
 export const educationData = [
@@ -30,7 +30,7 @@ export const educationData = [
 export const workExperienceData = [
   {
     company: "MarkIt (YC F25)",
-    position: "Founding Engineer Intern",
+    position: "Founding Engineer",
     period: "February 2026 - Present",
     description: "Agents & Infrastructure."
   },
@@ -63,13 +63,13 @@ export const workExperienceData = [
 export const projectsData = [
   {
     title: "echoAI",
-    description: `🏆 Podium for Google x Qualcomm Edge AI Hackathon. ${NEWLINE}Mobile app to help deaf and hard-of-hearing users detect, locate, and prioritize important sounds around them in real time, fully on-device. `,
+    description: `🏆 First place for Google x Qualcomm Edge AI Hackathon. ${NEWLINE}Mobile app to help deaf and hard-of-hearing users detect, locate, and prioritize important sounds around them in real time, fully on-device. `,
     technologies: ["liteRT", "Android Studio", "Kotlin", "Gradle"],
     link: "https://devpost.com/software/echoai-t7ol0v?ref_content=my-projects-tab&ref_feature=my_projects"
   },
   {
     title: "ascii2diagram",
-    description: `Web tool for converting ASCII diagrams emitted by LLMs into clean, structured diagrams in draw.io/Diagrams.net XML format.${NEWLINE} Enhanced with AI-based parsing and error correction. ${NEWLINE} Serves over 1000 monthly users`,
+    description: `Web tool for converting ASCII diagrams emitted by LLMs into clean, structured diagrams in draw.io/Diagrams.net XML format. ${NEWLINE} Serves over 100 monthly users`,
     technologies: ["Python", "GCP", "React", "Gemini LLM"],
     link: "https://ascii2diagram.xyz/"
   },
