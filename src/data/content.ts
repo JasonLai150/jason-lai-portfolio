@@ -9,30 +9,42 @@ export const processText = (text: string): string[] => {
 export const aboutContent = {
   name: "Jason Lai",
   title: "Software Engineer",
-  description: `Hi, I'm Jason, a junior at Georgia Tech studying Computer Science. ${NEWLINE} I'm a passionate developer with experience in back-end and cloud engineering, and I enjoy working with modern technologies to build user-focused, data-driven applications.${NEWLINE} I'm currently interested in AI engineering. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
+  description: `Hi, I'm Jason, a master's student at Georgia Tech studying computer science. ${NEWLINE} I'm a passionate developer with experience in AI and backend engineering, and I enjoy working with modern technologies to build user-focused, data-driven applications. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
 };
 
 export const educationData = [
   {
     institution: "Georgia Institute of Technology",
     degree: "M.S. Computer Science",
-    period: "Accepted for BS/MS Program",
-    description: `Artificial Intelligence Specialization`
+    period: "2026 - Present",
+    description: `GPA: 4.0 ${NEWLINE} Artificial Intelligence Specialization`
   },
   {
     institution: "Georgia Institute of Technology",
     degree: "B.S. Computer Science",
-    period: "2023 - Present",
+    period: "2023 - 2026",
     description: `GPA: 3.9 ${NEWLINE} Minor in Mathematics. ${NEWLINE} Concentrations in Information Internetworks and Computational Intelligence.`
   }
 ];
 
 export const workExperienceData = [
   {
+    company: "NeoSigma (YC F25)",
+    position: "Member of Technical Staff",
+    period: "June 2026 - Present",
+    description: "Self-improving agentic systems"
+  },
+  {
+    company: "Amazon",
+    position: "Software Development Engineer Intern",
+    period: "June 2026",
+    description: "Left to work on bigger problems."
+  },
+  {
     company: "MarkIt (YC F25)",
     position: "Founding Engineer",
-    period: "February 2026 - Present",
-    description: "Agents & Infrastructure."
+    period: "February 2026 - June 2026",
+    description: "Designed agent loops for duty classification. Built systems and pipelines for user/org resource provisioning and role-based access control."
   },
   {
     company: "Amazon",
