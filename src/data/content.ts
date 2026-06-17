@@ -17,7 +17,7 @@ export const educationData = [
     institution: "Georgia Institute of Technology",
     degree: "M.S. Computer Science",
     period: "2026 - Present",
-    description: `GPA: 4.0 ${NEWLINE} Artificial Intelligence Specialization`
+    description: `GPA: 4.0 ${NEWLINE} Specialization in Artificial Intelligence`
   },
   {
     institution: "Georgia Institute of Technology",
@@ -60,7 +60,7 @@ export const workExperienceData = [
   },
   {
     company: "Georgia Tech VIP Program",
-    position: "Software Developer",
+    position: "Undergraduate Researcher",
     period: "January 2024 - May 2024",
     description: "Research on wildfire physics and graphics. Created 3D wildfire spread simulations in OpenGL and flame simulations in WebGL."
   },
