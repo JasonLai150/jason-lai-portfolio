@@ -32,43 +32,43 @@ export const workExperienceData = [
     company: "NeoSigma",
     position: "Member of Technical Staff",
     period: "June 2026 - Present",
-    description: "Self-improving agentic systems ${NEWLINE} Backed by angels like Jeff Dean and others from OpenAI, Google DeepMind, World Labs, Mercor, Decagon, and others"
+    description: `Self-improving agentic systems ${NEWLINE} Backed by angels like Jeff Dean and others from OpenAI, Google DeepMind, World Labs, Mercor, Decagon, and others`
   },
   {
     company: "Amazon",
     position: "Software Development Engineer Intern",
     period: "June 2026",
-    description: "Left to work on bigger problems."
+    description: `Left to work on bigger problems.`
   },
   {
     company: "MarkIt (YC F25)",
     position: "Founding Engineer",
     period: "February 2026 - June 2026",
-    description: "Designed agent loops for duty classification. Built systems and pipelines for user/org resource provisioning and role-based access control."
+    description: `Designed agent loops for duty classification. Built systems and pipelines for user/org resource provisioning and role-based access control.`
   },
   {
     company: "Amazon",
     position: "Software Development Engineer Intern",
     period: "May 2025 - August 2025",
-    description: "Developed an end to end testing platform for Amazon's internal driver and route tracking system using native AWS services."
+    description: `Developed an end to end testing platform for Amazon's internal driver and route tracking system using native AWS services.`
   },
   {
     company: "Smurfit Westrock",
     position: "Software Engineer Intern",
     period: "May 2024 - August 2024",
-    description: "Created an LLM-based web audit tool for analyzing quality issues in IT project proposals and suggesting improvements."
+    description: `Created an LLM-based web audit tool for analyzing quality issues in IT project proposals and suggesting improvements.`
   },
   {
     company: "Georgia Tech VIP Program",
     position: "Undergraduate Researcher",
     period: "January 2024 - May 2024",
-    description: "Research on wildfire physics and graphics. Created 3D wildfire spread simulations in OpenGL and flame simulations in WebGL."
+    description: `Research on wildfire physics and graphics. Created 3D wildfire spread simulations in OpenGL and flame simulations in WebGL.`
   },
   {
     company: "Georgia State University",
     position: "Machine Learning Research Assistant",
     period: "August 2022 - May 2023",
-    description: "Data processing and validation for novel sentiment analysis and adversarial attack prevention models."
+    description: `Data processing and validation for novel sentiment analysis and adversarial attack prevention models.`
   }
 ];
 
