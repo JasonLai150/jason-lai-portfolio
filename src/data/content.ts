@@ -29,10 +29,10 @@ export const educationData = [
 
 export const workExperienceData = [
   {
-    company: "NeoSigma (YC F25)",
+    company: "NeoSigma",
     position: "Member of Technical Staff",
     period: "June 2026 - Present",
-    description: "Self-improving agentic systems"
+    description: "Self-improving agentic systems ${NEWLINE} Backed by angels like Jeff Dean and others from OpenAI, Google DeepMind, World Labs, Mercor, Decagon, and others"
   },
   {
     company: "Amazon",
