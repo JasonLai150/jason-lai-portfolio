@@ -9,7 +9,7 @@ export const processText = (text: string): string[] => {
 export const aboutContent = {
   name: "Jason Lai",
   title: "AI & Software Engineer",
-  description: `Hi, I'm Jason, a master's student at Georgia Tech studying computer science. ${NEWLINE} I'm a passionate developer with experience in AI and backend engineering, and I enjoy working with modern technologies to build user-focused, data-driven applications. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150[@]gmail[.]com`
+  description: `Hi, I'm Jason, a master's student at Georgia Tech studying computer science. ${NEWLINE} I'm a passionate developer with experience in AI and backend engineering, and I enjoy working with modern technologies to build user-focused, data-driven applications. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150@gmail.com`
 };
 
 export const educationData = [
