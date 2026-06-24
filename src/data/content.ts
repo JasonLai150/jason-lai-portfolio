@@ -75,13 +75,13 @@ export const workExperienceData = [
 export const projectsData = [
   {
     title: "alphaResearch",
-    description: `🏆 Cognition Award Winner. ${NEWLINE}Recursive sandboxed agents for autonomous research at scale. `,
-    technologies: ["Python", "TypeScript", "Docker", "FastAPI", "Next.js", "GCP", "Anthropic","Redis", "Sentry", "Weights & Biases"],
+    description: `🏆 Cognition Award Winner @ Berkeley AI Hackathon. ${NEWLINE}Recursive sandboxed agents for autonomous research at scale. `,
+    technologies: ["Python", "TypeScript", "Docker", "FastAPI", "Next.js", "GCP", "Anthropic","Redis", "Sentry", "Browserbase", "Weights & Biases"],
     link: "https://devpost.com/software/alpharesearch-9fwk4m"
   },
   {
     title: "echoAI",
-    description: `🏆 First place for Google x Qualcomm Edge AI Hackathon. ${NEWLINE}Mobile app to help deaf and hard-of-hearing users detect, locate, and prioritize important sounds around them in real time, fully on-device. `,
+    description: `🏆 First place @ Google x Qualcomm Edge AI Hackathon. ${NEWLINE}Mobile app to help deaf and hard-of-hearing users detect, locate, and prioritize important sounds around them in real time, fully on-device. `,
     technologies: ["liteRT", "Android Studio", "Kotlin", "Gradle"],
     link: "https://devpost.com/software/echoai-t7ol0v?ref_content=my-projects-tab&ref_feature=my_projects"
   },
