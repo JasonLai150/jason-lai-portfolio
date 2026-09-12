@@ -9,7 +9,7 @@ export const processText = (text: string): string[] => {
 export const aboutContent = {
   name: "Jason Lai",
   title: "AI & Software Engineer",
-  description: `Hi, I'm Jason, a master's student at Georgia Tech studying computer science. ${NEWLINE} I'm a passionate developer with experience in AI and backend engineering, and I enjoy working with modern technologies to build user-focused, data-driven applications. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150@gmail.com`
+  description: `Hi, I'm Jason, a master's student at Georgia Tech studying computer science. ${NEWLINE} I'm an experienced engineer specializing in AI, systems, and backend engineering, and I enjoy working with modern technologies to solve frontier problems. ${NEWLINE} I'm currently exploring post-training and agentic reinforcement learning. ${NEWLINE}⠀${NEWLINE} View my socials below or reach out to me at: ${NEWLINE} laijason150@gmail.com`
 };
 
 export const educationData = [
@@ -17,7 +17,7 @@ export const educationData = [
     institution: "Georgia Institute of Technology",
     degree: "M.S. Computer Science",
     period: "2026 - Present",
-    description: `GPA: 4.0 ${NEWLINE} Specialization in Artificial Intelligence`
+    description: `GPA: 4.0 ${NEWLINE} Specialization in Machine Learning`
   },
   {
     institution: "Georgia Institute of Technology",
@@ -31,7 +31,7 @@ export const workExperienceData = [
   {
     company: "NeoSigma",
     position: "Member of Technical Staff",
-    period: "June 2026 - Present",
+    period: "June 2026 - August 2026",
     description: `Building self-improving agentic systems. ${NEWLINE} Backed by angels like Jeff Dean and others from OpenAI, Google DeepMind, World Labs, Mercor, Decagon, etc.`
   },
   {
@@ -44,7 +44,7 @@ export const workExperienceData = [
     company: "MarkIt (YC F25)",
     position: "Founding Engineer",
     period: "February 2026 - June 2026",
-    description: `Designed agent loops for duty classification. Built systems and pipelines for user/org resource provisioning and role-based access control.`
+    description: `Designed agent loops for duty classification. Built agent evaluation environments and systems for user/org resource provisioning and role-based access control.`
   },
   {
     company: "Amazon",
@@ -74,6 +74,12 @@ export const workExperienceData = [
 
 export const projectsData = [
   {
+    title: "Signal",
+    description: `🏆 2nd @ SpaceXAI Grokathon. ${NEWLINE} Follower clustering, A/B testing, content generation, and engagement simulation for product launches on X. `,
+    technologies: ["Python", "Next.js", "FastAPI", "Docker", "Grok", "OASIS"],
+    link: "https://x.com/SpaceXAI/status/2088015998909849890"
+  },
+  {
     title: "alphaResearch",
     description: `🏆 Cognition Award Winner @ Berkeley AI Hackathon. ${NEWLINE}Recursive sandboxed agents for autonomous research at scale. `,
     technologies: ["Python", "TypeScript", "Docker", "FastAPI", "Next.js", "GCP", "Anthropic","Redis", "Sentry", "Browserbase", "Weights & Biases"],
@@ -81,7 +87,7 @@ export const projectsData = [
   },
   {
     title: "echoAI",
-    description: `🏆 First place @ Google x Qualcomm Edge AI Hackathon. ${NEWLINE}Mobile app to help deaf and hard-of-hearing users detect, locate, and prioritize important sounds around them in real time, fully on-device. `,
+    description: `🏆 1st @ Google x Qualcomm Edge AI Hackathon. ${NEWLINE}Mobile app to help deaf and hard-of-hearing users detect, locate, and prioritize important sounds around them in real time, fully on-device. `,
     technologies: ["liteRT", "Android Studio", "Kotlin", "Gradle"],
     link: "https://devpost.com/software/echoai-t7ol0v?ref_content=my-projects-tab&ref_feature=my_projects"
   },
@@ -264,6 +270,11 @@ export const albumsData = [
     title: "Beatopia",
     artist: "beabadoobee",
     image: "https://i.scdn.co/image/ab67616d0000b273384d10f967c2b914de7e2713?w=300&h=300&fit=crop"
+  },
+  {
+    title: "Free Your Mind",
+    artist: "Prospa",
+    image: "https://f4.bcbits.com/img/a0499433716_10.jpg?w=300&h=300&fit=crop"
   },
   // {
   //   title: "18 Months",
