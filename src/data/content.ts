@@ -290,6 +290,11 @@ export const albumsData = [
 
 export const booksData = [
   {
+    title: "Crime and Punishment",
+    author: "Fyodor Dostoevsky",
+    image: "https://m.media-amazon.com/images/I/81bAXZAp-GL._AC_UF1000,1000_QL80_.jpg?w=300&h=400&fit=crop"
+  },
+  {
     title: "Meditations, The Annotated Edition",
     author: "Marcus Aurelius, Robin Waterfield",
     image: "https://m.media-amazon.com/images/I/811XpND7V0L.jpg?w=300&h=400&fit=crop"
