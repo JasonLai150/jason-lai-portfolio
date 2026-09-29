@@ -29,6 +29,12 @@ export const educationData = [
 
 export const workExperienceData = [
   {
+    company: "Georgia Tech",
+    position: "Graduate Student Researcher",
+    period: "August 2026 - Present",
+    description: `Agentic RL & post-training ${NEWLINE} Advised by Prof. Chao Zhang`
+  },
+  {
     company: "NeoSigma",
     position: "Member of Technical Staff",
     period: "June 2026 - August 2026",
