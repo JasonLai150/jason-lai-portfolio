@@ -24,3 +24,6 @@ dist-ssr
 
 # superpowers scratch
 .superpowers/
+
+.env*.local
+*-key.json
