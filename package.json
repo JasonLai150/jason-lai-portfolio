@@ -12,7 +12,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "migrate": "tsx scripts/migrate-supabase-to-gcs.ts",
-    "typecheck:api": "tsc -p api/tsconfig.json"
+    "typecheck:api": "tsc -p api/tsconfig.json",
+    "dev:api": "vercel dev"
   },
   "dependencies": {
     "@google-cloud/storage": "^8.4.0",
