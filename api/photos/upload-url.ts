@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { handleError, requireAuth, sendError, sendJson } from "../_lib/http";
-import { signedUploadUrl } from "../_lib/storage";
-import { extForContentType, fullPath, IMMUTABLE_CACHE, isValidNewId, thumbPath } from "../../src/lib/photos";
+import { handleError, requireAuth, sendError, sendJson } from "../_lib/http.js";
+import { signedUploadUrl } from "../_lib/storage.js";
+import { extForContentType, fullPath, IMMUTABLE_CACHE, isValidNewId, thumbPath } from "../../src/lib/photos.js";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!requireAuth(req, res)) return;

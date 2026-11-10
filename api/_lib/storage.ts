@@ -1,6 +1,6 @@
 import { Storage, type Bucket } from "@google-cloud/storage";
-import { MANIFEST_CACHE, PhotoError, emptyManifest, type PhotoManifest } from "../../src/lib/photos";
-import { getEnv } from "./env";
+import { MANIFEST_CACHE, PhotoError, emptyManifest, type PhotoManifest } from "../../src/lib/photos.js";
+import { getEnv } from "./env.js";
 
 const MANIFEST_PATH = "photos.json";
 

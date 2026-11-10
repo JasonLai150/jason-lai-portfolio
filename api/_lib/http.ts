@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { PhotoError } from "../../src/lib/photos";
-import { getEnv } from "./env";
-import { isAuthorized } from "./auth";
+import { PhotoError } from "../../src/lib/photos.js";
+import { getEnv } from "./env.js";
+import { isAuthorized } from "./auth.js";
 
 export function sendJson(res: VercelResponse, status: number, body: unknown): void {
   res.status(status).json(body);

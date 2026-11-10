@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { handleError, requireAuth, sendError, sendJson } from "../_lib/http";
-import { objectExists, updateManifest } from "../_lib/storage";
+import { handleError, requireAuth, sendError, sendJson } from "../_lib/http.js";
+import { objectExists, updateManifest } from "../_lib/storage.js";
 import {
   addPhoto,
   extForContentType,
@@ -9,7 +9,7 @@ import {
   normalizeCaption,
   thumbPath,
   type PhotoEntry,
-} from "../../src/lib/photos";
+} from "../../src/lib/photos.js";
 
 const isPositiveInt = (v: unknown): v is number => typeof v === "number" && Number.isInteger(v) && v > 0;
 

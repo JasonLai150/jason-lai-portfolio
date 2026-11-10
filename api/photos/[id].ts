@@ -1,13 +1,13 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { handleError, requireAuth, sendError, sendJson } from "../_lib/http";
-import { deleteObject, updateManifest } from "../_lib/storage";
+import { handleError, requireAuth, sendError, sendJson } from "../_lib/http.js";
+import { deleteObject, updateManifest } from "../_lib/storage.js";
 import {
   isValidId,
   normalizeCaption,
   removePhoto,
   setCaption,
   type PhotoEntry,
-} from "../../src/lib/photos";
+} from "../../src/lib/photos.js";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!requireAuth(req, res)) return;
