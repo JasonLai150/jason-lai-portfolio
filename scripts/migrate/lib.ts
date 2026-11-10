@@ -55,3 +55,13 @@ export function buildEntry(args: {
     createdAt: now.toISOString(),
   };
 }
+
+export function orientedDimensions(meta: {
+  width: number;
+  height: number;
+  orientation?: number;
+}): { width: number; height: number } {
+  return (meta.orientation ?? 1) >= 5
+    ? { width: meta.height, height: meta.width }
+    : { width: meta.width, height: meta.height };
+}

@@ -20,6 +20,7 @@ import {
   dedupeIds,
   extOf,
   isImageFile,
+  orientedDimensions,
   type SourceFile,
 } from "./migrate/lib";
 
@@ -80,8 +81,13 @@ async function main(): Promise<void> {
       );
       if (!res.ok) throw new Error(`download ${res.status}`);
       const buf = Buffer.from(await res.arrayBuffer());
-      const { width, height } = await sharp(buf).rotate().metadata();
-      if (!width || !height) throw new Error("could not read dimensions");
+      const meta = await sharp(buf).metadata();
+      if (!meta.width || !meta.height) throw new Error("could not read dimensions");
+      const { width, height } = orientedDimensions({
+        width: meta.width,
+        height: meta.height,
+        orientation: meta.orientation,
+      });
 
       const fullKey = fullPath(f.id, extOf(f.name));
       const thumbKey = thumbPath(f.id);

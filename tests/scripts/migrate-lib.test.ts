@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildEntry, dedupeIds, extOf, isImageFile } from "../../scripts/migrate/lib";
+import { buildEntry, dedupeIds, extOf, isImageFile, orientedDimensions } from "../../scripts/migrate/lib";
 
 describe("isImageFile", () => {
   it("accepts images case-insensitively", () => {
@@ -49,5 +49,16 @@ describe("buildEntry", () => {
       bytes: 3800000,
       createdAt: "2026-11-09T00:00:00.000Z",
     });
+  });
+});
+
+describe("orientedDimensions", () => {
+  it("leaves dimensions unchanged without a swapping orientation", () => {
+    expect(orientedDimensions({ width: 4032, height: 3024 })).toEqual({ width: 4032, height: 3024 });
+    expect(orientedDimensions({ width: 4032, height: 3024, orientation: 1 })).toEqual({ width: 4032, height: 3024 });
+  });
+  it("swaps for orientations 5-8", () => {
+    expect(orientedDimensions({ width: 4032, height: 3024, orientation: 6 })).toEqual({ width: 3024, height: 4032 });
+    expect(orientedDimensions({ width: 4032, height: 3024, orientation: 8 })).toEqual({ width: 3024, height: 4032 });
   });
 });
