@@ -21,3 +21,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# superpowers scratch
+.superpowers/
+
+.env*.local
+*-key.json
+.vercel
