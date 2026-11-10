@@ -22,9 +22,19 @@ describe("fetchManifest", () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: false, status: 500 }));
     await expect(fetchManifest("https://s/b")).rejects.toThrow(/500/);
   });
+  it("rejects without fetching when the base URL is unset", async () => {
+    const f = vi.fn();
+    vi.stubGlobal("fetch", f);
+    await expect(fetchManifest("")).rejects.toThrow("VITE_PHOTOS_BASE_URL is not set");
+    expect(f).not.toHaveBeenCalled();
+  });
 });
 
 describe("admin api", () => {
+  it("adminPing rejects on a 200 (SPA fallback is not a valid ping)", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: true, status: 200, json: async () => ({}) }));
+    await expect(adminPing("pw")).rejects.toThrow("request failed (200)");
+  });
   it("adminPing sends bearer and maps 204/401", async () => {
     const f = vi.fn().mockResolvedValueOnce({ ok: true, status: 204 }).mockResolvedValueOnce({ ok: false, status: 401 });
     vi.stubGlobal("fetch", f);

@@ -1,6 +1,7 @@
 import { emptyManifest, type PhotoEntry, type PhotoManifest } from "./photos";
 
 export async function fetchManifest(baseUrl: string): Promise<PhotoManifest> {
+  if (!baseUrl) throw new Error("VITE_PHOTOS_BASE_URL is not set");
   const res = await fetch(`${baseUrl}/photos.json?t=${Date.now()}`, { cache: "no-store" });
   if (res.status === 404) return emptyManifest();
   if (!res.ok) throw new Error(`Failed to load photos (${res.status})`);
@@ -27,7 +28,7 @@ function authed(password: string, init: RequestInit = {}, json?: unknown): Reque
 export async function adminPing(password: string): Promise<boolean> {
   const res = await fetch("/api/admin/ping", authed(password));
   if (res.status === 401) return false;
-  if (!res.ok) throw await failure(res);
+  if (res.status !== 204) throw await failure(res);
   return true;
 }
 

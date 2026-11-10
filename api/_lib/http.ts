@@ -12,7 +12,15 @@ export function sendError(res: VercelResponse, status: number, message: string):
 }
 
 export function requireAuth(req: VercelRequest, res: VercelResponse): boolean {
-  if (isAuthorized(req, getEnv().adminPassword)) return true;
+  let adminPassword: string;
+  try {
+    adminPassword = getEnv().adminPassword;
+  } catch (err) {
+    console.error(err);
+    sendError(res, 500, "internal error");
+    return false;
+  }
+  if (isAuthorized(req, adminPassword)) return true;
   sendError(res, 401, "unauthorized");
   return false;
 }

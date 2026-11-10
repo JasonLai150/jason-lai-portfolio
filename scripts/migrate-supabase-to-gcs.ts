@@ -5,12 +5,13 @@
  * Requires `.env.local` with VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY, GCS_BUCKET, and
  * GOOGLE_APPLICATION_CREDENTIALS=./portfolio-admin-key.json set in the shell
  * (the service account key; no extra `gcloud` login needed).
- * Safe to re-run: uploads are skipped when both full/ and thumbs/ objects already exist.
+ * Re-runs upload nothing that already exists (full/ and thumbs/ objects are skipped) and preserve
+ * entries already in photos.json (e.g. admin uploads); the manifest write is skipped if any file failed.
  */
 import { readFileSync } from "node:fs";
 import { Storage } from "@google-cloud/storage";
 import sharp from "sharp";
-import { emptyManifest, thumbPath, fullPath, type PhotoEntry } from "../src/lib/photos";
+import { emptyManifest, type PhotoManifest, thumbPath, fullPath, type PhotoEntry } from "../src/lib/photos";
 import {
   IMMUTABLE_CACHE,
   MANIFEST_CACHE,
@@ -20,6 +21,7 @@ import {
   dedupeIds,
   extOf,
   isImageFile,
+  mergeManifestPhotos,
   orientedDimensions,
   type SourceFile,
 } from "./migrate/lib";
@@ -121,12 +123,23 @@ async function main(): Promise<void> {
     }
   }
 
-  manifest.photos = entries;
-  await bucket.file("photos.json").save(JSON.stringify(manifest, null, 2), {
-    resumable: false,
-    contentType: "application/json",
-    metadata: { cacheControl: MANIFEST_CACHE },
-  });
+  if (failures.length === 0) {
+    let existing: PhotoEntry[] = [];
+    try {
+      const [contents] = await bucket.file("photos.json").download();
+      existing = (JSON.parse(contents.toString("utf8")) as PhotoManifest).photos ?? [];
+    } catch (err) {
+      if ((err as { code?: number }).code !== 404) throw err;
+    }
+    manifest.photos = mergeManifestPhotos(existing, entries);
+    await bucket.file("photos.json").save(JSON.stringify(manifest, null, 2), {
+      resumable: false,
+      contentType: "application/json",
+      metadata: { cacheControl: MANIFEST_CACHE },
+    });
+  } else {
+    console.error("skipping photos.json write because some files failed; fix and re-run");
+  }
 
   console.log(
     `migrated ${entries.length} photos, ${(totalBytes / 1024 / 1024).toFixed(1)} MB, ${skipped} skipped uploads`,

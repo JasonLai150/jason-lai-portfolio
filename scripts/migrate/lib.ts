@@ -65,3 +65,8 @@ export function orientedDimensions(meta: {
     ? { width: meta.height, height: meta.width }
     : { width: meta.width, height: meta.height };
 }
+
+export function mergeManifestPhotos(existing: PhotoEntry[], migrated: PhotoEntry[]): PhotoEntry[] {
+  const migratedIds = new Set(migrated.map((p) => p.id));
+  return [...migrated, ...existing.filter((p) => !migratedIds.has(p.id))];
+}
