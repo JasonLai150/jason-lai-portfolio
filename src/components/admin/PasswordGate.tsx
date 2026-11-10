@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { adminPing } from "@/lib/photosApi";
 
-export const PASSWORD_KEY = "admin-password";
-
 interface Props {
-  onUnlocked: () => void;
+  onUnlocked: (password: string) => void;
 }
 
 const PasswordGate = ({ onUnlocked }: Props) => {
@@ -21,8 +19,7 @@ const PasswordGate = ({ onUnlocked }: Props) => {
     setMessage(null);
     try {
       if (await adminPing(value)) {
-        sessionStorage.setItem(PASSWORD_KEY, value);
-        onUnlocked();
+        onUnlocked(value);
       } else {
         setMessage("wrong password");
       }

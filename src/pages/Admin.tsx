@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import PasswordGate, { PASSWORD_KEY } from "@/components/admin/PasswordGate";
+import PasswordGate from "@/components/admin/PasswordGate";
 import PhotoLibrary from "@/components/admin/PhotoLibrary";
 import UploadQueue from "@/components/admin/UploadQueue";
 import { sortPhotos, type PhotoEntry } from "@/lib/photos";
 import { fetchManifest } from "@/lib/photosApi";
-
-const readPassword = () => sessionStorage.getItem(PASSWORD_KEY);
+import { clearStoredPassword, readStoredPassword, writeStoredPassword } from "@/lib/adminSession";
 
 const Admin = () => {
-  const [password, setPassword] = useState<string | null>(readPassword);
+  const [password, setPassword] = useState<string | null>(readStoredPassword);
   const [photos, setPhotos] = useState<PhotoEntry[]>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -25,7 +24,7 @@ const Admin = () => {
   }, [password]);
 
   const logOut = () => {
-    sessionStorage.removeItem(PASSWORD_KEY);
+    clearStoredPassword();
     setPassword(null);
     setPhotos([]);
   };
@@ -52,7 +51,10 @@ const Admin = () => {
           </div>
         </div>
       ) : (
-        <PasswordGate onUnlocked={() => setPassword(readPassword())} />
+        <PasswordGate onUnlocked={(pw) => {
+            writeStoredPassword(pw);
+            setPassword(pw);
+          }} />
       )}
     </div>
   );
