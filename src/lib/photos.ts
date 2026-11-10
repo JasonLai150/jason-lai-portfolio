@@ -80,7 +80,7 @@ export function normalizeCaption(v: unknown): string | null {
 }
 
 export function extForContentType(ct: unknown): string | null {
-  return typeof ct === "string" && Object.hasOwn(ALLOWED_CONTENT_TYPES, ct)
+  return typeof ct === "string" && Object.prototype.hasOwnProperty.call(ALLOWED_CONTENT_TYPES, ct)
     ? ALLOWED_CONTENT_TYPES[ct]
     : null;
 }
