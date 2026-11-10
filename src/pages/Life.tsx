@@ -1,134 +1,16 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import SocialLinks from "../components/SocialLinks";
-import { createClient } from '@supabase/supabase-js';
+import { fetchManifest } from "../lib/photosApi";
+import { toPhotos, type Photo } from "../lib/photos";
 
-// Vite environment variables
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-
-const supabase = createClient(supabaseUrl, supabaseKey);
-
-interface Photo {
-  name: string;
-  url: string;
-  thumbnailUrl: string;
-  caption: string;
-}
-
-// Function to create a 800x800 centered crop of an image
-const createSquareThumbnail = (originalUrl: string): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.crossOrigin = 'anonymous';
-    
-    img.onload = () => {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      
-      if (!ctx) {
-        reject(new Error('Could not get canvas context'));
-        return;
-      }
-      
-      // Set canvas to 800
-      canvas.width = 800;
-      canvas.height = 800;
-      
-      const { width: originalWidth, height: originalHeight } = img;
-      
-      // Calculate scaling factor (scale down until the smaller dimension is 800px)
-      const scale = Math.max(canvas.width / originalWidth, canvas.height / originalHeight);
-      
-      // Calculate scaled dimensions
-      const scaledWidth = originalWidth * scale;
-      const scaledHeight = originalHeight * scale;
-      
-      // Calculate crop position to center the image
-      const cropX = (scaledWidth - canvas.width) / 2;
-      const cropY = (scaledHeight - canvas.height) / 2;
-      
-      // Draw the image: scale it and position it to center the crop
-      ctx.drawImage(
-        img,
-        -cropX, -cropY,  // Source position (negative to center)
-        scaledWidth, scaledHeight  // Scaled dimensions
-      );
-      
-      // Convert canvas to blob URL
-      canvas.toBlob((blob) => {
-        if (blob) {
-          const thumbnailUrl = URL.createObjectURL(blob);
-          resolve(thumbnailUrl);
-        } else {
-          reject(new Error('Could not create blob'));
-        }
-      }, 'image/jpeg', 0.8);
-    };
-    
-    img.onerror = () => reject(new Error('Could not load image'));
-    img.src = originalUrl;
-  });
-};
-
-// Component for individual photo with intersection observer
+// Component for individual photo
 const PhotoCard = ({ photo, index, onClick }: { 
   photo: Photo; 
   index: number; 
   onClick: () => void;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
-  const [isProcessing, setIsProcessing] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { 
-        threshold: 0.1,
-        rootMargin: '200px' // Start loading 200px before image comes into view
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Process image when it comes into view
-  useEffect(() => {
-    if (isInView && !thumbnailUrl && !isProcessing) {
-      setIsProcessing(true);
-      createSquareThumbnail(photo.thumbnailUrl)
-        .then((processedUrl) => {
-          setThumbnailUrl(processedUrl);
-          setIsProcessing(false);
-        })
-        .catch((error) => {
-          console.warn(`Failed to process thumbnail for ${photo.name}:`, error);
-          setThumbnailUrl(photo.thumbnailUrl); // Fallback to original
-          setIsProcessing(false);
-        });
-    }
-  }, [isInView, photo.thumbnailUrl, thumbnailUrl, isProcessing, photo.name]);
-
-  // Cleanup blob URL when component unmounts
-  useEffect(() => {
-    return () => {
-      if (thumbnailUrl && thumbnailUrl.startsWith('blob:')) {
-        URL.revokeObjectURL(thumbnailUrl);
-      }
-    };
-  }, [thumbnailUrl]);
 
   return (
     <div
@@ -138,48 +20,30 @@ const PhotoCard = ({ photo, index, onClick }: {
       <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
         {/* Fixed aspect ratio container for consistent grid */}
         <div className="relative w-full aspect-square bg-gray-200 dark:bg-gray-700 overflow-hidden">
-          <div 
-            ref={imgRef}
-            className="w-full h-full flex items-center justify-center"
-          >
-            {isInView && thumbnailUrl && (
-              <img
-                src={thumbnailUrl}
-                alt={photo.caption}
-                className={`w-full h-full object-cover transition-opacity duration-500 ${
-                  isLoaded ? 'opacity-100' : 'opacity-0'
-                }`}
-                style={{
-                  // Browser-based optimization
-                  maxWidth: '100%',
-                  height: 'auto',
-                  imageRendering: 'auto'
-                }}
-                loading="lazy"
-                decoding="async"
-                onLoad={() => setIsLoaded(true)}
-                onError={() => {
-                  console.warn(`Failed to load processed image: ${photo.name}`);
-                  setIsLoaded(true); // Still show the container
-                }}
-              />
-            )}
-            
-            {/* Loading/Processing placeholder */}
-            {isInView && (!thumbnailUrl || !isLoaded) && (
+          <div className="w-full h-full flex items-center justify-center">
+            <img
+              src={photo.thumbnailUrl}
+              alt={photo.caption}
+              loading="lazy"
+              decoding="async"
+              className={`w-full h-full object-cover transition-opacity duration-500 ${
+                isLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
+              onLoad={() => setIsLoaded(true)}
+              onError={() => {
+                console.warn(`Failed to load image: ${photo.name}`);
+                setIsLoaded(true); // Still show the container
+              }}
+            />
+
+            {/* Loading placeholder */}
+            {!isLoaded && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="flex flex-col items-center gap-2">
                   <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-                  <div className="text-gray-400 text-xs">
-                    {isProcessing ? 'Processing...' : 'Loading...'}
-                  </div>
+                  <div className="text-gray-400 text-xs">Loading...</div>
                 </div>
               </div>
-            )}
-            
-            {/* Lazy loading placeholder */}
-            {!isInView && (
-              <div className="text-gray-400 text-sm">Loading...</div>
             )}
           </div>
 
@@ -248,48 +112,8 @@ const Life = () => {
   const fetchPhotos = async () => {
     try {
       setLoading(true);
-      
-      // List all files in the 'jason-photos' bucket
-      const { data, error } = await supabase.storage
-        .from('jason-photos')
-        .list('', {
-          limit: 100,
-          offset: 0,
-          sortBy: { column: 'name', order: 'asc' }
-        });
-
-      if (error) {
-        throw error;
-      }
-
-      if (data) {
-        // Filter out folders and get only image files
-        const imageFiles = data.filter(file => 
-          file.name.match(/\.(jpg|jpeg|png|gif|webp)$/i)
-        );
-
-        // Get public URLs and create photo objects
-        const photoPromises = imageFiles.map(async (file) => {
-          // Full-size image URL
-          const { data: urlData } = supabase.storage
-            .from('jason-photos')
-            .getPublicUrl(file.name);
-
-          // Extract caption from filename (remove extension and replace hyphens/underscores with spaces)
-          const caption = file.name
-            .replace(/\.[^/.]+$/, ''); // Remove file extension only
-
-          return {
-            name: file.name,
-            url: urlData.publicUrl,
-            thumbnailUrl: urlData.publicUrl, // Same URL, we'll optimize with CSS and loading strategy
-            caption: caption
-          };
-        });
-
-        const photosData = await Promise.all(photoPromises);
-        setPhotos(photosData);
-      }
+      const manifest = await fetchManifest(import.meta.env.VITE_PHOTOS_BASE_URL);
+      setPhotos(toPhotos(manifest, import.meta.env.VITE_PHOTOS_BASE_URL));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load photos');
       console.error('Error fetching photos:', err);
